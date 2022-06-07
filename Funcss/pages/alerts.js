@@ -86,7 +86,7 @@ Alerts are used to show imprtant messages and notices to users.
     <div className="close">&times;</div>
 </div>
 <div className="alert info section">
-    <div className="icon"> <i class="fa fa-info-circle"></i></div>
+    <div className="icon"> <i className="fa fa-info-circle"></i></div>
     <div className="text text-white">
       This is an Info!
     </div>
@@ -94,14 +94,14 @@ Alerts are used to show imprtant messages and notices to users.
 </div>
 
 <div className="alert warning section">
-    <div className="icon"><i class="fa fa-exclamation-triangle"></i></div>
+    <div className="icon"><i className="fa fa-exclamation-triangle"></i></div>
     <div className="text text-white">
       This is a warning!
     </div>
     <div className="close">&times;</div>
 </div>
 <div className="alert danger section">
-    <div className="icon"><i class="far fa-times-circle"></i></div>
+    <div className="icon"><i className="far fa-times-circle"></i></div>
     <div className="text text-white">
       This is Danger!
     </div>
@@ -159,7 +159,7 @@ Alerts are used to show imprtant messages and notices to users.
     <div className="close">&times;</div>
 </div>
 <div className="alert info-outline section">
-    <div className="icon"> <i class="fa fa-info-circle"></i></div>
+    <div className="icon"> <i className="fa fa-info-circle"></i></div>
     <div className="text">
       This is an Info!
     </div>
@@ -167,14 +167,14 @@ Alerts are used to show imprtant messages and notices to users.
 </div>
 
 <div className="alert warning-outline section">
-    <div className="icon"><i class="fa fa-exclamation-triangle"></i></div>
+    <div className="icon"><i className="fa fa-exclamation-triangle"></i></div>
     <div className="text">
       This is a warning!
     </div>
     <div className="close">&times;</div>
 </div>
 <div className="alert danger-outline section">
-    <div className="icon"><i class="far fa-times-circle"></i></div>
+    <div className="icon"><i className="far fa-times-circle"></i></div>
     <div className="text">
       This is Danger!
     </div>

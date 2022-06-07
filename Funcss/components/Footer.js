@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo"
-
+import Button from "../Funcss/Components/Button"
+import Card from "../Funcss/Components/Card"
 function Footer() {
     const year = new Date().getFullYear()
     return (
@@ -15,9 +16,12 @@ function Footer() {
               {/* You can download the framework for free and use our website themes and components for free. */}
               <div className="section">
               <a href="/app/funcss.apk">
-              <button className="button success text-white">
+              {/* <button className="button success text-white">
               <i className="fab fa-android"></i> Download Android
-              </button>
+              </button> */}
+              <Card>
+              <Button color="indigo" text="Download Android"/>
+                </Card>
               </a>
               </div>
           
