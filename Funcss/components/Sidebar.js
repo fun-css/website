@@ -183,7 +183,7 @@ function Sidebar() {
   <div  className="sidebar-link" key={link.text.trim()}>
       
       <Link href={`/${link.path}`}>
-          <a className='text-black hover-text-indigo hover'>
+          <a className='text-black hover-text-indigo '>
           <div className='padding'>{link.text}</div>
           </a>
       </Link>

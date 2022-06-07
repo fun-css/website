@@ -75,8 +75,8 @@ function Container(props) {
     </div>
     <div className="preview">
         <div className="">
-
-         <div className="container">
+          <div className='container'>
+          <div>
          <div className="h4">Contents In Container</div>
           <div className="padding section border">
             <div>
@@ -89,6 +89,8 @@ function Container(props) {
             </div>
           </div>
          </div>
+          </div>
+   
 
          <div className="h4">Content Not In container</div>
          <div>

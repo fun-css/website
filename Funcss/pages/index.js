@@ -195,6 +195,7 @@ const [modal, setmodal] = useState("none");
   Just type the class<span className="badge">button</span> to style your button, you can change the background color
   of your button by using our css color classes, you can also create a hover up and ripple buttons.
 </div>
+
 <div>
   
 <div>
