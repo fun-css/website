@@ -1,5 +1,5 @@
-import Navbarleft from "./Navbarleft"
-import Navbarright from "./Navbarright"
+import Navleft from "./Navleft"
+// import Navright from "./Navright"
 import React , {Component} from "react"
 export default class Navbar extends Component{
 render(){
@@ -11,7 +11,7 @@ ${this.props.funcss}
 `} 
 >
 <div>
-    <Navbarleft />
+    <Navleft />
 </div>
 </div>
 );
