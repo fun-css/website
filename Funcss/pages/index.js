@@ -110,7 +110,7 @@ size="large"
 </Col>
 <Col sm={12} md={10} lg={10} funcss="padding-20">
 <Typography size="bigger">
-<span className="text-indigo text-bigger">Don't Waste Time, </span>
+<span className="text-indigo text-bigger">Don&apos;t Waste Time, </span>
 Grab A Component For Your React App.
     </Typography>
 <div className="width-400-max">
