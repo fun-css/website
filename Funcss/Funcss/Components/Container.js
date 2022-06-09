@@ -1,7 +1,7 @@
 import React from 'react'
-const Container = ({children}) => {
+const Container = ({children , funcss}) => {
 return ( 
-<div className='container'>
+<div className={`container ${funcss}`}>
 {children}
 </div>
 );

@@ -9,6 +9,7 @@ import Col from "../Funcss/Components/Col"
 import Button from "../Funcss/Components/Button"
 import Color from "../Funcss/Components/Color"
 import Container from "../Funcss/Components/Container"
+import Typography from "../Funcss/Components/Typography"
 const Axios = require("axios")
 function Home() {
 const [comments, setcomments] = useState([])
@@ -79,7 +80,8 @@ which are easy to integrate with your react application.
 text="Getting Started"
 bg="indigo"
 color="white"
-funcss="card card inline-block margin padding-20 h4"
+funcss="card card inline-block margin h4"
+size="large"
 />
 </a>
 </Link>
@@ -88,371 +90,69 @@ funcss="card card inline-block margin padding-20 h4"
 <Button 
 text="Components"
 color="indigo"
-funcss="card inline-block margin padding-20 h4"
+funcss="card inline-block margin h4"
+size="large"
 />    
 </a>
 </Link>
 </div>
 </div>
 </div>
-<div className="col sm-12 md-2 lg-2 dotted">
+<div className="col sm-12 md-2 lg-2 dotted blob">
 
 </div>
 
 </div>
 
-
-<div className="container padding-top-40">
-<div className="text-center text-x-large text-indigo">Our Themes</div>
-<div className="text-center h4">Download And Use Our Free Css Themes</div>
-<div className="text-center  padding">
-  Download and use our Themes for free, Build cool websites with Funcss.
+<Container funcss="padding-top-40">
+<Grid>
+<Col sm={12} md={2} lg={2} funcss="padding dotted">
+</Col>
+<Col sm={12} md={10} lg={10} funcss="padding-20">
+<Typography size="bigger">
+<span className="text-indigo text-bigger">Don't Waste Time, </span>
+Grab A Component For Your React App.
+    </Typography>
+<div className="width-400-max">
+<Typography size="medium" funcss="section" text={`
+Make your code clean with our react components, just import to use for free.
+`}/>
+<Link href="/components">
+<a>
+<Button 
+text="Grab A Component"
+color="white"
+bg="indigo"
+funcss="card h5 section"
+size="medium"
+/>    
+</a>
+</Link>
 </div>
-<div>
-    <div className="screen">
-        <div className="row">
-            <div className="col sm-6 md-4 lg-4 padding">
-                <div>
-                    <span className="screen-dot red"></span>
-                    <span className="screen-dot yellow"></span>
-                    <span className="screen-dot green"></span>
-                </div>
-            </div>
-            <div className="col sm-6 md-8 lg-8 padding">
-                <input type="text" className="input borderless white width-100-p padding" disabled placeholder="https://funcss.herokuapp.com"/>
-            </div>
-        </div>
-        <div className="screen-content">
-              
-        <div className="slider three">
-    <div className="slide-container">
-        <div className="slide">
-            <div className="slide-content">
-            <img src="/themes/1.jpg" className="responsive" alt="company theme" />
-            </div>
+</Col>
+</Grid>
+</Container>
 
-        </div>
-        <div className="slide">
-            <div className="slide-content">
-            <img src="/themes/2.jpg" className="responsive" alt="company theme" />
-            </div>
-        </div>
-        <div className="slide">
-        <div className="slide-content">
-        <img src="/themes/3.jpg" className="responsive" alt="company theme" />
-        </div>
-        </div>
-   
-    </div>
-
-</div>
-        </div>
-    </div>
-    <center><div className='height-50 width-40 black'></div></center>
-    <center><div className='height-20 width-90-p black'></div></center>
-</div>
-
-</div>
 
 
 <div className="container padding-top-50">
-<div className="text-center text-xx-large text-indigo">Responsive</div>
-<div className="h4 text-center">Create Responsive Websites With Css Grid.</div>
-<div className="padding-20">
+    <div className="width-500-max">
+    <div className="text-bigger text-indigo">Create Responsive Websites</div>
+<div className="h4">Create Responsive Websites With Css Grid.</div>
+<div className="section">
     Create awesome responsive websites with css flex-box and media queries.
     Our framework partition your website in to columns and rows which are 
     responsive to fit all screen sizes.
 </div>
-<div className="padding-20">
-<Link href="/grid">
-<a>
-<button className="indigo button card text-white f2">
-  Learn More
-  <i className="fas fa-angle-right margin-left-10"></i>
-</button>
-</a>
-</Link>
-</div>
-<div className="container text-center">
-<img src="/svg/devices.svg" className="width-100-p" alt="cssresponsive" />
-</div>
-
+        </div>
+<div className="row">
+ <div className="col padding border sm-12 md-6 lg-8 light height-50">sm-12 md-6 lg-8</div>
+ <div className="col padding border sm-12 md-6 lg-4  height-50">sm-12 md-6 lg-4</div>
+ <div className="col padding border sm-6 md-8 lg-6  height-50">sm-6 md-8 lg-6</div>
+ <div className="col padding border sm-6 md-4 lg-6 light height-50">sm-6 md-4 lg-6</div>
+</div> 
 
 </div>
-
-<div className="section hr container"></div>
-
-<div className="container padding-top-30">
-<h1 className="text-center text-xx-large text-indigo no-margin">FUNCSS BUTTONS</h1>
-<h2 className="text-center no-margin h4">Create Nice Css Buttons Designs</h2>
-<div className="padding">
-  Create nice css buttons for your website, use buttons with cool animation effects, 
-  Just type the class<span className="badge">button</span> to style your button, you can change the background color
-  of your button by using our css color classes, you can also create a hover up and ripple buttons.
-</div>
-
-<div>
-  
-<div>
-    <div className="screen">
-        <div className="row">
-            <div className="col sm-6 md-4 lg-4 padding">
-                <div>
-                    <span className="screen-dot red"></span>
-                    <span className="screen-dot yellow"></span>
-                    <span className="screen-dot green"></span>
-                </div>
-            </div>
-            <div className="col sm-6 md-8 lg-8 padding">
-                <input type="text" className="input borderless white width-100-p padding" disabled placeholder="https://funcss.herokuapp.com/buttons"/>
-            </div>
-        </div>
-        <div className="screen-content">
-        <div className='row white'>
-        <div className='col sm-12 md-4 lg-4 padding'>
-            <div className='padding border card'>
-                <div className='text-large'>Simple Button</div>
-                <div className='hr section'></div>
-                <button className='button indigo  text-white'>Simple Button</button>
-            </div>
-        </div>
-        <div className='col sm-12 md-4 lg-4 padding'>
-            <div className='padding border card'>
-            <div className='text-large'>Raised Button</div>
-                <div className='hr section'></div>
-                <button className='button deep-purple text-white card'>Raised Button</button>
-            </div>
-        </div>
-        <div className='col sm-12 md-4 lg-4 padding'>
-            <div className='padding border card'>
-            <div className='text-large'>Circular Button</div>
-                <div className='hr section'></div>
-                <button className='button indigo card text-white float height-50 width-50'>Float</button>
-            </div>
-        </div>
-        <div className='col sm-12 md-4 lg-4 padding'>
-            <div className='padding border card'>
-            <div className='text-large'>Full width Button</div>
-                <div className='hr section'></div>
-                <button className='button full-width green text-white card'>Full width</button>
-            </div>
-        </div>
-        <div className='col sm-12 md-4 lg-4 padding'>
-            <div className='padding border card'>
-            <div className='text-large'>Ripple Effect Button</div>
-                <div className='hr section'></div>
-                <button className='button full-width ripple pink text-white card'>Ripple Effect</button>
-            </div>
-        </div>
-        <div className='col sm-12 md-4 lg-4 padding'>
-            <div className='padding border card'>
-            <div className='text-large'>Hover Up Button</div>
-                <div className='hr section'></div>
-                <button className='button full-width ripple teal card hover-up'>Hover up</button>
-            </div>
-        </div>
-    </div>
-        </div>
-        
-    <div className="section">
-    <Link href="/buttons">
-<a>
-    <button className="indigo button card text-white f2">
-  Learn More
-  <i className="fas fa-angle-right margin-left-10"></i>
-  </button>
-</a>
-</Link>
-</div>
-
-    </div>
-
-</div>
-</div>
-
-
-</div>
-<div className="section hr container"></div>
-
-<div className="container padding-top-30">
-<div className="text-center text-xx-large text-indigo no-margin">CSS CARDS</div>
-<h2 className="header h4 padding">Create css cards, hoverable cards, fliping cards , horizontal cards and reveal content cards.</h2>
-<div className="padding">
- Design nice css cards, hoverable fliping card, reveal content card and horizontal cards.
- Cards are use to design specific important areas of your website.
- The class <span className="badge">card </span> is use to create a cool shadow effect on your 
- html element.
-</div>
-<div>
-<div>
-    <div className="screen">
-        <div className="row">
-            <div className="col sm-6 md-4 lg-4 padding">
-                <div>
-                    <span className="screen-dot red"></span>
-                    <span className="screen-dot yellow"></span>
-                    <span className="screen-dot green"></span>
-                </div>
-            </div>
-            <div className="col sm-6 md-8 lg-8 padding">
-                <input type="text" className="input borderless white width-100-p padding" disabled placeholder="https://funcss.herokuapp.com/card"/>
-            </div>
-        </div>
-        <div className="screen-content relative">
-        <div className='row white'>
-        <div className='col sm-12 md-6 lg-4 padding'>
-<div className="card width-100-p">
-    <div className="relative">
-        <img src="images/deo.jpg" className="width-100-p height-200" alt="hoverable css card" />
-        <div className="text-large card-title text-white">Card Title</div>
-    </div>
-
-    <div className="padding text-small">
-    This is have a Title on top of the image.
-    You can use this card to display informtion about a person or a team.
-    </div>
-</div>
-        </div>
-        <div className='col sm-12 md-6 lg-4 padding'>
-<div className="card hover-shadow">
-    <div className="relative">
-        <img src="images/deo.jpg" className="width-100-p height-200" alt="reveal content css card"/>
-        <div className="text-large card-title text-white">Card Title</div>
-        <div className="text-large card-fab">
-            <button className='button indigo card text-white float height-40 width-40'>
-            <i className="fas fa-check"></i>
-            </button>
-        </div>
-    </div>
-
-    <div className="padding text-small">
-    This is have a Title on top of the image with a floating button.
-    You can use this card to display informtion about a person or a team.
-    </div>
-</div>
-            
-        </div>
-
-
-    </div>
-        </div>
-        
-    <div className="section">
-<Link href="/card">
-<button className="button indigo text-white">
-  Learn More
-  <i className="fas fa-angle-right margin-left-10"></i>
-</button>
-</Link>
-</div>
-
-    </div>
-
-</div>
-
-<div>
-
-</div>
-</div>
-
-
-</div>
-{/* 
-<div className="container padding-top-30">
-<div>
-            <div className="row shadow-bingo padding">
-                <div className="col sm-12 md-6 lg-6 padding">
-                <div className="h2 outfit">Give A Comment</div>
-                <div className="hr section"></div>
-                <div className="h4">
-                    Drop a comment, it will help our team understand user experience so that
-                    we will be able to provide users with what they need.
-                </div>
-                </div>
-                <div className="col sm-12 md-6 lg-6 padding">
-                    <div className="section">
-                        <label htmlFor="">Email:</label>
-                        <input type="email" className="input bordered full-width" placeholder="enter your email" onChange={(e)=>setemail(e.target.value)} />
-                    </div>
-                    <div className="section">
-                    <label htmlFor="">Comment:</label>
-                        <textarea type="text" className="input bordered full-width" placeholder="enter your comment"  onChange={(e)=>setcomment(e.target.value)}  />
-                    </div>
-                    <div className="section">
-                        <div className="text-red text-small">{error}</div>
-                    </div>
-                    <button className="button indigo text-white" onClick={HandleComment}>Comment <i className="far fa-paper-plane"></i></button>
-                </div>
-            </div>
- </div>
- <div className="row">
-     
-{/* {
-    comments.map(comment=>(
-    <div className="col sm-12 md-6 lg-6 padding">
-        <div className="section">
-        <div className="pointer padding react-card center">
-        <div className="row-flex">
-            <div> <img src="/images/avatar.png" className="height-50 width-50 circle" /> </div>
-            <div className="padding">
-             <div className="">{comment.email}</div>
-            <div className="opacity-5 text-small">
-            <i className="fas fa-check text-deep-purple"></i>
-            <span>Developer</span>
-            </div>
-            </div>
-        </div>
-        <div>
-          <div className="text-small">
-          <span><i className="fas fa-quote-left text-indigo inline-block margin"></i></span>
-            {comment.comment}
-          <span><i className="fas fa-quote-right text-indigo inline-block margin"></i></span>
-          </div>
-        </div>
-    </div>
-        </div>
-    </div>
-
-    ))
-}
-</div>
-<div className="slider three padding-top-50">
-    <div className="slide-container">
-
-
-        {
-    comments.map(comment=>(
-        <div className="slide" key={comment.id}>
-        <div className="pointer padding react-card center">
-        <div className="row-flex">
-            <div> <img src="/images/avatar.png" className="height-50 width-50 circle" /> </div>
-            <div className="padding">
-             <div className="">{comment.email}</div>
-            <div className="opacity-5 text-small">
-            <i className="fas fa-check text-deep-purple"></i>
-            <span>Developer</span>
-            </div>
-            </div>
-        </div>
-        <div>
-          <span><i className="fas fa-quote-left text-indigo inline-block margin"></i></span>
-          <span className="text-small">          
-          {comment.comment}
-          </span>
-          <span><i className="fas fa-quote-right text-indigo inline-block margin"></i></span>
-        </div>
-    </div>
-        </div>
-    ))
-}
-
-    </div>
-
-</div>
-
-
-
-</div> */}
 
 <Footer />
 

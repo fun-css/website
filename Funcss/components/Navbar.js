@@ -3,7 +3,7 @@ import Image  from 'next/image';
 import  Link from 'next/link';
 function Navbar() {
 return (
-<nav className="width-100-p fixed-top white navbar card">
+<nav className="width-100-p fixed-top white navbar glass">
 <div className="container">
 <div className="navigation-bar">
 <div className="nav-logo">

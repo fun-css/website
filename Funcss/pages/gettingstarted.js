@@ -45,7 +45,7 @@ function Gettingstarted() {
              <h1 className="header text-indigo">
                  Getting Started
              </h1>
-             <div className="h4 width-500-max">
+             <div className="h5 width-500-max">
                Download the funcss framework to start creating awesome responsive website for free. You can also use the funcss cdn.
              </div>
   

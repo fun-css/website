@@ -120,19 +120,19 @@ function Sidebar() {
     }
     const [search, setsearch] = useState('');
     return (
-        <div className="text-small">
+        <div className="">
 
               <div className="open-sidebar">
             <span className="material-icons icon size-2 pointer" onClick={Handlesidebar} >
                menu
             </span>
               </div>
-              <div className="SideBar">
+              <div className="SideBar glass">
               <div className="section padding ">
                       <input className="input search width-100-p padding-top-10 padding-bottom-10 text-center" onChange={(e)=>setsearch(e.target.value)} placeholder="Search..." />
              </div>
 
-                <div className="sidecontent">
+                <div className="sidecontent ">
                   
                 <div className="section padding">
 

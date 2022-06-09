@@ -25,9 +25,6 @@ function Navigation() {
 </Head>
               <div className="content-wrapper">
             <div className="sub-content padding">
-             <div className="border padding ads content-middle light">
-             <div id="container-8efab60a26b5c40a3a52aab9bdb98896">Ads</div>
-             </div>
         <div className="section">
           <a href="#simplenavbar" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Navigation Bar</div></a>
           <a href="#navbardropdown" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Dropdown Navigation Bar</div></a> 

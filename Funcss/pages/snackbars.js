@@ -2,7 +2,7 @@ import React from 'react';
 import { useState , useEffect } from 'react';
 import Footer from '../components/Footer';
 import Head from 'next/head';
-import Snackbar from '../Funcss/Snackbar';
+import Snackbar from '../Funcss/Components/Snackbar';
 function Snackbars() {
 const [openSnackbar, setopenSnackbar] = useState(false)
     const Snackbarstyle = "`${Snackbar}`"
@@ -33,9 +33,6 @@ const [openSnackbar, setopenSnackbar] = useState(false)
 </Head>
               <div className="content-wrapper">
             <div className="sub-content padding">
-             <div className="border padding ads content-middle light">
-             <div id="container-8efab60a26b5c40a3a52aab9bdb98896">Ads</div>
-             </div>
         <div className="section">
           <a href="#introduction" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Introduction</div></a>
           <a href="#Snackbar" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Snackbar</div></a> 
@@ -108,7 +105,7 @@ Welcome Snackbar
 
 <div className="preview" id="Snackbar">
 <button className="button indigo text-white card open-Snackbar" onClick={()=>setopenSnackbar(!openSnackbar)}>Open Snackbar</button>
-<Snackbar  snackClose = "&times;" snackContent="Welcome to my website" open={openSnackbar} />
+<Snackbar  close = "&times;" message="Welcome to my website" open={openSnackbar} timeOut={6000} />
 </div>
 </div>
  

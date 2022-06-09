@@ -1,5 +1,5 @@
 import { useEffect,useState } from "react"
-const Snackbar = ({snackContent, snackClose , timeOut , open }) => {
+const Snackbar = ({message, close , timeOut , open ,position , funcss}) => {
 const [state, setstate] = useState(false)
 useEffect(() => {
 const snackbarDom = document.querySelector(".snackbar")
@@ -17,21 +17,19 @@ snackbarDom.style.display = "none"
 
 })
 
-
-// const open = (id)=>{
-// document.querySelector("#" + id).style.display = "none"
-// }
-
 return ( 
 <div>
-<div className="snackbar">
+<div className={`snackbar ${position} ${funcss}`}>
 <div className="snackbar-content">
 <div className="snackbar-body">
-{snackContent}
+{message}
 </div>
 <div>
 <span className="close-snackbar">
-<span onClick={()=>setopen(false)}>{snackClose}</span>
+<span onClick={()=>{
+const snackbarDom = document.querySelector(".snackbar")
+snackbarDom.style.display = "none"  
+}}>{close}</span>
 </span>
 </div>
 

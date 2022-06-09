@@ -16,10 +16,10 @@ h1,h2{line-height: 3.5rem;}
   display:inline-block;
   padding:2px;
   width:50px;
-  background-color:#4CAF50;
+  background-color:#3f51b5;
   accordion
 } */
-.topic{padding-top:30px}
+.topic{padding-top:30px;padding-bottom:10px;font-weight: 600!important;}
 
 .logo{font-size: x-large;font-weight: bolder;}
 .lighter{
@@ -64,10 +64,10 @@ h1,h2{line-height: 3.5rem;}
     z-index:5;
   }
   .nav-link{transition: 0.3s;border-bottom: 5px solid white;padding:5px;font-size: small;color: black;}
-  .nav-link:hover{border-bottom: 5px solid #4CAF50;}
+  .nav-link:hover{border-bottom: 5px solid #3f51b5;}
   .sidebar-link{color: black;}
   .started{
-    border:2px solid #4CAF50;
+    border:2px solid #3f51b5;
     border-radius: 20px;
     
   }
@@ -79,7 +79,7 @@ h1,h2{line-height: 3.5rem;}
   }
   .nav-link:hover .nav-link::after{
     content:"";
-    background-color: #4CAF50;
+    background-color: #3f51b5;
     display: block;
     width: 100%;
     padding: 2px;
@@ -98,47 +98,45 @@ h1,h2{line-height: 3.5rem;}
 a{transition:0.3s}
 a:hover{color:#3f51b5}
 .content-wrapper{position: relative;width: 100%;}
-.main-content{position: absolute;left: 0;top: 0;width: 75%;padding-bottom: 50px;padding-top:30px}
-.sub-content{position: fixed;right: 10px;top: 80px;width: 20%;padding: 10px;height: 100%;font-size: small;}
-.sub-content a:nth-child(odd){background-color: #f2f2f2;}
+.main-content{position: absolute;left: 0;top: 0;width: 80%;padding-bottom: 50px;padding-top:30px}
+.sub-content{
+position: fixed;
+right: 10px;
+top: 80px;
+width: 15%;
+padding: 10px;
+height: 100%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-weight:600;
+}
 .sub-content a{width: 100%;}
 @media(max-width: 900px) {
   .main-content{width: 100%;position: relative;}
   .sub-content{position: relative;width: 100%;display: block;top: 0;right: 0;}
 }
 .right-link{border-left: 5px solid white;}
-.right-link:hover{border-left: 5px solid #8315ba;}
+.right-link:hover{border-left: 5px solid #3f51b5;}
 .search:focus{outline: none;}
 .search{border:1px solid #ddd;border-radius: 5px;}
 .header-1{font-size: xx-large;font-weight: 800;}
 .header-2{font-size: x-large;font-weight: 800;}
 .header-3{font-size: larger;font-weight: 800;}
 .note{
-  border: 1px solid #ddd;
-  padding: 30px 10px;
-  margin-top: 10px ;
-  margin-bottom: 10px;
-  background-color: #f2f2f2;
+  padding: 10px 0px;
   cursor: pointer;
-  font-size: small;
   position: relative;
   overflow:hidden;
   width:100%;
+  /* background-color: rgb(229, 246, 253) !important; */
+  color: rgb(1, 67, 97) !important;
+  max-width:500px
 }
-.note::before{
-  content: "Note";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding: 5px;
-  background-color: wheat;
-}
+
 .note-title{font-size: x-large;}
 .code{
-  border-left: 10px solid #4CAF50;
+  border-left: 10px solid #3f51b5;
   overflow:hidden;
   height: fit-content;
   padding: 10px;
@@ -177,12 +175,12 @@ a:hover{color:#3f51b5}
 }
 
 .code div::first-letter {
-  color: #8315ba;
+  color: #3f51b5;
 }
 
 .code xmp{
   background-color: rgb(32,42,68);
-  border-left: 5px solid #4CAF50;
+  border-left: 5px solid #3f51b5;
   overflow: auto;
   max-height: 300px;
   font-family: monospace;
@@ -193,12 +191,12 @@ a:hover{color:#3f51b5}
 }
 
 .code xmp div {
-  color: #4CAF50;
+  color: #3f51b5;
 }
 
 .sub-topic{
   font-size: x-large;
-  color: #8315ba;
+  color: #3f51b5;
 }
 .badge{background-color: rgba(225,225, 225, 0.9);padding: 2px;display: inline-block;margin: 2px;border: 1px solid rgba(0, 0, 0, 0.2);font-size: small;letter-spacing: 2px;font-family: monospace;}
 .icon-class{position: relative;}.icon-class::before{content:"class";position: absolute;top: 0;left: 0;border: 1px solid #ddd;padding: 2px;}
@@ -253,12 +251,13 @@ a:hover{color:#3f51b5}
 .react-card{
   max-width:500px;
   box-shadow: 0px 5px 20px 0px rgba(225,225,225,0.5), 0px 10px 20px 0px rgba(225,225, 225, 0.9);
-  border-left:5px solid #8315ba;
+  border-left:5px solid #3f51b5;
 }
 .ads{
   min-height:200px;
   max-height: fit-content;
   height:fit-content;
+  display:none;
 }
 
 .screen{padding: 20px 10px 40px;background-color: #f2f2f2;border-radius: 10px;}

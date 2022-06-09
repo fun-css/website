@@ -81,17 +81,10 @@ function Colors() {
              <xmp>
  {
    `
-<div class="indigo card padding text-white section">
+<div class="indigo padding text-white section">
    <div class="text-big">Indigo</div>
     <div>
      My background color is indigo <br />
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iste suscipit dolorum, blanditiis dolore a vitae rerum repellat, culpa voluptas quae eligendi, maxime non. Voluptatem doloremque delectus voluptas consequuntur eum!
-    </div>
-</div>
-<div class="purple card padding text-white section">
-   <div class="text-big">Purple</div>
-    <div>
-     My background color is purple <br />
      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iste suscipit dolorum, blanditiis dolore a vitae rerum repellat, culpa voluptas quae eligendi, maxime non. Voluptatem doloremque delectus voluptas consequuntur eum!
     </div>
 </div>
@@ -107,13 +100,7 @@ function Colors() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iste suscipit dolorum, blanditiis dolore a vitae rerum repellat, culpa voluptas quae eligendi, maxime non. Voluptatem doloremque delectus voluptas consequuntur eum!
       </div>
     </div>
-    <div className="purple card padding text-white section">
-      <div className="text-big">Purple</div>
-      <div>
-        My background color is purple <br />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iste suscipit dolorum, blanditiis dolore a vitae rerum repellat, culpa voluptas quae eligendi, maxime non. Voluptatem doloremque delectus voluptas consequuntur eum!
-      </div>
-    </div>
+
                </div>
             </div>
             
