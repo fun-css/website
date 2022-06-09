@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Footer from "../components/Footer";
+import Alert from "../Funcss/Components/Alert";
+import Section from "../Funcss/Components/Section";
 
 const alerts = () => {
     return ( 
@@ -32,7 +34,7 @@ content="fun, css, card, slide, panel, slide panel"
 Alerts - Funcss
 </h1>
 <div className="h4">
-Alerts are used to show imprtant messages and notices to users.
+Alerts are used to show important messages and notices to users.
 </div>
 <div className="section hr">
 
@@ -76,37 +78,22 @@ Alerts are used to show imprtant messages and notices to users.
 </xmp>
     </div>
     <div className="preview">
+      <Section>
+      <Alert message="This is a success" type="success"/>
+      </Section>
 
+      <Section>
+      <Alert message="This is the alert message" type="info"/>
+      </Section>
 
-<div className="alert success section">
-    <div className="icon"><i className="fa fa-check"></i></div>
-    <div className="text text-white">
-      This is Success!
-    </div>
-    <div className="close">&times;</div>
-</div>
-<div className="alert info section">
-    <div className="icon"> <i className="fa fa-info-circle"></i></div>
-    <div className="text text-white">
-      This is an Info!
-    </div>
-    <div className="close">&times;</div>
-</div>
+      <Section>
+      <Alert message="This is the alert message" type="warning"/>
+      </Section>
 
-<div className="alert warning section">
-    <div className="icon"><i className="fa fa-exclamation-triangle"></i></div>
-    <div className="text text-white">
-      This is a warning!
-    </div>
-    <div className="close">&times;</div>
-</div>
-<div className="alert danger section">
-    <div className="icon"><i className="far fa-times-circle"></i></div>
-    <div className="text text-white">
-      This is Danger!
-    </div>
-    <div className="close">&times;</div>
-</div>
+      <Section>
+      <Alert message="This is the alert message" type="danger"/>
+      </Section>
+
 
 
     </div>
@@ -150,37 +137,21 @@ Alerts are used to show imprtant messages and notices to users.
 </xmp>
     </div>
     <div className="preview">
+    <Section>
+      <Alert message="Success - This is a message" outline={true} type="success"/>
+      </Section>
 
-<div className="alert success-outline section">
-    <div className="icon"><i className="fa fa-check"></i></div>
-    <div className="text">
-      This is Success!
-    </div>
-    <div className="close">&times;</div>
-</div>
-<div className="alert info-outline section">
-    <div className="icon"> <i className="fa fa-info-circle"></i></div>
-    <div className="text">
-      This is an Info!
-    </div>
-    <div className="close">&times;</div>
-</div>
+      <Section>
+      <Alert message="Info - This is a message" outline={true} type="info"/>
+      </Section>
 
-<div className="alert warning-outline section">
-    <div className="icon"><i className="fa fa-exclamation-triangle"></i></div>
-    <div className="text">
-      This is a warning!
-    </div>
-    <div className="close">&times;</div>
-</div>
-<div className="alert danger-outline section">
-    <div className="icon"><i className="far fa-times-circle"></i></div>
-    <div className="text">
-      This is Danger!
-    </div>
-    <div className="close">&times;</div>
-</div>
+      <Section>
+      <Alert message="Warning - This is a message" outline={true} type="warning"/>
+      </Section>
 
+      <Section>
+      <Alert message="Error - This is a message" outline={true} type="danger"/>
+      </Section>
 
     </div>
 </div>

@@ -1,6 +1,9 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import  Head  from 'next/head';
+import Typography from "../Funcss/Components/Typography"
+import Breadcumb from "../Funcss/Components/Breadcumb"
+import Link from "next/link"
 function Gettingstarted() {
 
     return (
@@ -21,9 +24,6 @@ function Gettingstarted() {
           </Head>
                         <div className="content-wrapper">
             <div className="sub-content padding">
-             <div className="border padding ads content-middle light">
-                    <div id="container-8efab60a26b5c40a3a52aab9bdb98896"></div>
-             </div>
              <div className="section">
                <a href="#cdn" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">CDN</div></a>
                <a href="#downloadzip" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Download Zip</div></a>
@@ -35,13 +35,20 @@ function Gettingstarted() {
             </div>
                 <div className="main-content">
                 <div className="container">
-             <h1 className="text-big text-lighter text-indigo header">
+                  <Link href= "/">
+                    <a>Home</a>
+                  </Link>
+                  <Breadcumb type="slash" />
+                  <Link href= "#">
+                    <a>Gettingstarted</a>
+                  </Link>
+             <h1 className="header text-indigo">
                  Getting Started
              </h1>
-             <div className="h4">
+             <div className="h4 width-500-max">
                Download the funcss framework to start creating awesome responsive website for free. You can also use the funcss cdn.
              </div>
-             <div className="section hr"></div>
+  
             </div>
 
      

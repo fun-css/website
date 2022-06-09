@@ -1,4 +1,6 @@
-const Button = ({text , 
+import { useEffect } from 'react';
+const Button = ({
+text , 
 color,
 bg , 
 width, 
@@ -7,10 +9,15 @@ minHeight ,
 minWidth,
 margin,
 padding,
+fullWidth,
+funcss,
 children,
 }) => {
+    useEffect(()=>{
+        console.log(fullWidth)
+    })
 return ( 
-<button className={`button text-${color} ${bg}`} 
+<button className={`button text-${color} ${bg} ${funcss}`} 
 style={{
 width:`${width}`, 
 height:`${height}`,

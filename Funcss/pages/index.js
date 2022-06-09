@@ -4,6 +4,11 @@ import Head from 'next/head'
 import Link from 'next/dist/client/link'
 import {useEffect, useState} from "react"
 import Logo from '../components/Logo';
+import Grid from "../Funcss/Components/Grid"
+import Col from "../Funcss/Components/Col"
+import Button from "../Funcss/Components/Button"
+import Color from "../Funcss/Components/Color"
+import Container from "../Funcss/Components/Container"
 const Axios = require("axios")
 function Home() {
 const [comments, setcomments] = useState([])
@@ -55,55 +60,52 @@ const [modal, setmodal] = useState("none");
  </Head>
 
 
-      <div className="container">
-        <div className="row">
-            <div className="col sm-12 md-12 lg-6">
-             <div className="padding">
-             <h1 className="no-margin header h4">
-                <Logo /> Modern responsive CSS framework for developing responsive websites.
+      <Container className="">
+        <Grid>
+            <Col sm={12} md={12} lg={8}>
+                <div className="">
+                <div className="padding">
+             <h1 className="no-margin text-bigger">
+              <span className='text-indigo text-bigger'> Build Greate </span> Web Applications With Funcss
             </h1>
              </div>
-             <div className="padding">
-                 Funcss is a free, open source css framework for developing modern responsive
-                 websites and impressive front-end applications.
+             <div className="padding h4">
+                 Funcss is an open source css framework for developing modern responsive
+                 websites and impressive front-end applications.It comes with predefined components
+                 which are easy to integrate with your react application.
              </div>
-   <div className="flex">
-    <div className="flex-50">
-        <div className="padding">
-        <Link href="/gettingstarted">
+   <div className="padding">
+   <Link href="/gettingstarted">
          <a>
-         <button className="button width-100-p text-white indigo card ">
-          Getting Started
-          <i className="fas fa-angle-right margin-left-10"></i>
-          </button>
+             <Button 
+             text="Getting Started"
+             bg="indigo"
+             color="white"
+             />
          </a>
        </Link>
-        </div>
-  </div>
-    <div className="flex-50">
-        <div className="padding">
-        <Link href="https://codeload.github.com/fun-css/funcss/zip/refs/heads/main">
+       <Link href="https://codeload.github.com/fun-css/funcss/zip/refs/heads/main">
             <a>
-            <button className="button width-100-p deep-purple card text-white">
-        <i className="fas fa-download icon margin-right-10"></i> 
-      Download v1.0 
-        </button>         
+            <Button 
+             text="Download v1.0"
+             bg="purple"
+             color="white"
+             />    
             </a>
       </Link>
-        </div>
-  </div>
 
 </div>
-            </div>
-            <div className="col sm-12 md-12 lg-6 padding-top-20">
+                </div>
+            </Col>
+            {/* <Col sm={12} md={12} lg={6}>
                 <div>
                     <video src="/video/colors.mp4" className="responsive" controls></video>
                 </div>
-            </div>
-        </div>
+            </Col> */}
+        </Grid>
 
 
-      </div>
+      </Container>
 
 
 

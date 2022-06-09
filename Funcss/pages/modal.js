@@ -2,8 +2,14 @@ import React from 'react';
 import { useState , useEffect } from 'react';
 import Footer from '../components/Footer';
 import Head from 'next/head';
-function Modal(props) {
-    const [modal, setmodal] = useState("-100%");
+import Modal from '../Funcss/Components/Modal';
+import Modalcontent from './../Funcss/Components/Modalcontent';
+import Modalaction from './../Funcss/Components/Modalaction';
+import Modalheader from '../Funcss/Components/Modalheader';
+import Typography from '../Funcss/Components/Typography';
+import Button from '../Funcss/Components/Button';
+function Funmodal(props) {
+    const [modal, setmodal] = useState(true);
     const modalstyle = "`${modal}`"
     useEffect(() => {
      const modal = document.querySelector(".modal")
@@ -15,11 +21,9 @@ function Modal(props) {
      })
    
     })
-   //  react modal
-    const openModal = async(id)=>{
-      const modal = await document.querySelector(`#${id}`)
-      modal.style.display = "block"
-    }
+
+
+   
     return (
         <div>
                     <section>
@@ -123,24 +127,24 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, cupiditate non 
 </div>
 
 <div className="preview" id="modal">
-<button className="button indigo text-white card open-modal" onClick={()=>openModal("myModal")}>Open Modal</button>
-   <div className="modal" id='myModal'>
-   <div className="modal-content">
-   <div className="modal-title">Modal Header</div>
-   <div className='modal-body'>
-   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, cupiditate non tempore, ea a provident quidem maxime repellat maiores voluptas commodi debitis dolor quod, aliquam tenetur itaque id enim unde!
-   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, cupiditate non tempore, ea a provident quidem maxime repellat maiores voluptas commodi debitis dolor quod, aliquam tenetur itaque id enim unde!
-   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, cupiditate non tempore, ea a provident quidem maxime repellat maiores voluptas commodi debitis dolor quod, aliquam tenetur itaque id enim unde!
-   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, cupiditate non tempore, ea a provident quidem maxime repellat maiores voluptas commodi debitis dolor quod, aliquam tenetur itaque id enim unde!
-   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, cupiditate non tempore, ea a provident quidem maxime repellat maiores voluptas commodi debitis dolor quod, aliquam tenetur itaque id enim unde!
-   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, cupiditate non tempore, ea a provident quidem maxime repellat maiores voluptas commodi debitis dolor quod, aliquam tenetur itaque id enim unde!
-   </div>
-   <div className="modal-action">
-      <button className="button blue text-white">Save</button>
-      <button className="button red text-white close-modal">Abort</button>
-   </div>
-   </div>
-   </div>
+<button className="button indigo text-white card open-modal" onClick={()=>setmodal(true)}>Open Modal</button>
+{
+   modal &&
+   <Modal>
+<Modalheader>
+   <Typography text="Modal Header" heading="h2"/>
+</Modalheader>
+<Modalcontent>
+   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eius ipsa ipsum vitae, sed vero repellendus quibusdam tenetur laudantium, temporibus adipisci explicabo fuga nobis possimus quia, itaque ab at iure.
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quibusdam earum facilis alias dolorem, quas doloremque. Eveniet repellendus nisi sint placeat maxime optio doloremque aliquam quasi veniam expedita, repellat animi.
+   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio natus nam repellendus optio corporis, dicta dolorum laborum veniam numquam earum ut adipisci velit amet quibusdam quaerat perferendis minus id incidunt!
+</Modalcontent>
+<Modalaction funcss="text-right">
+<Button color="white" bg="success">Save</Button>
+<Button color="white" bg="red" onClick={()=>setmodal(false)}>About</Button>
+</Modalaction>
+</Modal>
+}
 </div>
 </div>
  
@@ -163,4 +167,4 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, cupiditate non 
     );
 }
 
-export default Modal;
+export default Funmodal;

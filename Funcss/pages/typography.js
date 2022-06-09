@@ -1,7 +1,8 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Head  from 'next/head';
-function Typography() {
+import Typography from './../Funcss/Components/Typography';
+function Funtypography() {
     let fontSize = `
     <div class="card padding white">
     <div class="text-jumbo">This is jumbo</div>
@@ -127,21 +128,37 @@ function Typography() {
        {fontSize}
    </xmp>
  </div>
+<div className="code react">
+<xmp>
+{`<Typography size="jumbo">This is jumbo</Typography>
+  <Typography size="bigger">This is bigger</Typography>
+  <Typography size="big">This is big</Typography>
+  <Typography size="xx-large">This is xx-large</Typography>
+  <Typography size="x-large">This is x-large</Typography>
+  <Typography size="larger">This is larger</Typography>
+  <Typography size="large">This is large</Typography>
+  <Typography size="medium">This is medium</Typography>
+  <Typography size="small">This is small</Typography>
+  <Typography size="smaller">This is smaller</Typography>
+  <Typography size="x-small">This is x-small</Typography>
+  <Typography size="xx-small">This is xx-small</Typography>`}
+</xmp>
+ </div>
    <div className="preview">
 <div>
   <div className="card padding white">
-  <div className="text-jumbo">This is jumbo</div>
-  <div className="text-bigger">This is bigger</div>
-  <div className="text-big">This is big</div>
-  <div className="text-xx-large">This is xx-large</div>
-  <div className="text-x-large">This is x-large</div>
-  <div className="text-larger">This is larger</div>
-  <div className="text-large">This is large</div>
-  <div className="text-medium">This is medium</div>
-  <div className="text-small">This is small</div>
-  <div className="text-smaller">This is smaller</div>
-  <div className="text-x-small">This is x-small</div>
-  <div className="text-xx-small">This is xx-small</div>
+  <Typography size="jumbo">This is jumbo</Typography>
+  <Typography size="bigger">This is bigger</Typography>
+  <Typography size="big">This is big</Typography>
+  <Typography size="xx-large">This is xx-large</Typography>
+  <Typography size="x-large">This is x-large</Typography>
+  <Typography size="larger">This is larger</Typography>
+  <Typography size="large">This is large</Typography>
+  <Typography size="medium">This is medium</Typography>
+  <Typography size="small">This is small</Typography>
+  <Typography size="smaller">This is smaller</Typography>
+  <Typography size="x-small">This is x-small</Typography>
+  <Typography size="xx-small">This is xx-small</Typography>
   </div>
 </div>
 
@@ -298,4 +315,4 @@ function Typography() {
     );
 }
 
-export default Typography;
+export default Funtypography;

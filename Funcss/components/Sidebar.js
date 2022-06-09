@@ -87,6 +87,10 @@ function Sidebar() {
             path:"progress"
         },
         {
+            text:"Snackbar",
+            path:"snackbars"
+        },
+        {
             text:"Tooltip",
             path:"tooltip"
         },
@@ -142,16 +146,12 @@ function Sidebar() {
        return links
    }
    }).map(link=>(
-  <div className="padding-top-10" key={link.text.trim()}>
-      <div className="padding button text-lighter sidebar-link" onClick={()=>{
-      window.location.assign(`/${link.path}`)
-      }}>
-      {link.text}
-      <span className="sidebar-icon">
-      <i className="fas fas fa-angle-double-right text-indigo"></i>
-      </span>
-
-      </div>
+  <div className="padding" key={link.text.trim()}>
+      <Link href={`/${link.path}`}>
+          <a className="sidebar-link">
+              <div>{link.text}</div>
+        </a>
+      </Link>
 
   </div>
     ))
@@ -183,7 +183,7 @@ function Sidebar() {
   <div  className="sidebar-link" key={link.text.trim()}>
       
       <Link href={`/${link.path}`}>
-          <a className='text-black hover-text-indigo '>
+          <a className='text-black hover-text-indigo'>
           <div className='padding'>{link.text}</div>
           </a>
       </Link>

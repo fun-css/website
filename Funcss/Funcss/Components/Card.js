@@ -7,11 +7,12 @@ minHeight ,
 minWidth,
 margin,
 padding,
+funcss,
 children,
 // fab
 }) => {
 return ( 
-<div className={`card text-${color} ${bg}`}
+<div className={`card text-${color} ${bg} ${funcss}`}
 style={{
 width:`${width}`, 
 height:`${height}`,
@@ -19,6 +20,7 @@ minHeight:`${minHeight}`,
 minWidth:`${minWidth}`,
 margin:`${margin}`,
 padding:`${padding}`
+
 }}
 >
 <div class="relative">
