@@ -59,54 +59,47 @@ const [modal, setmodal] = useState("none");
 
  </Head>
 
+<div className="row text-center">
+<div className="col sm-12 md-10 lg-10">
+    <div className="width-600-max center">
+<div className="hero text-bigger">
+<span className="text-indigo text-bigger">The Next Generation </span> 
+Of Web Design
+</div>
+<div className="padding width-500-max center">
+Funcss is an open source css framework for developing modern responsive
+websites and impressive front-end applications.It comes with predefined components
+which are easy to integrate with your react application.
+</div>
+<div className="padding-top-20">
 
-      <Container className="">
-        <Grid>
-            <Col sm={12} md={12} lg={8}>
-                <div className="">
-                <div className="padding">
-             <h1 className="no-margin text-bigger">
-              <span className='text-indigo text-bigger'> Build Greate </span> Web Applications With Funcss
-            </h1>
-             </div>
-             <div className="padding h4">
-                 Funcss is an open source css framework for developing modern responsive
-                 websites and impressive front-end applications.It comes with predefined components
-                 which are easy to integrate with your react application.
-             </div>
-   <div className="padding">
-   <Link href="/gettingstarted">
-         <a>
-             <Button 
-             text="Getting Started"
-             bg="indigo"
-             color="white"
-             />
-         </a>
-       </Link>
-       <Link href="https://codeload.github.com/fun-css/funcss/zip/refs/heads/main">
-            <a>
-            <Button 
-             text="Download v1.0"
-             bg="purple"
-             color="white"
-             />    
-            </a>
-      </Link>
+<Link href="/gettingstarted">
+<a>
+<Button 
+text="Getting Started"
+bg="indigo"
+color="white"
+funcss="card card inline-block margin padding-20 h4"
+/>
+</a>
+</Link>
+<Link href="/components">
+<a>
+<Button 
+text="Components"
+color="indigo"
+funcss="card inline-block margin padding-20 h4"
+/>    
+</a>
+</Link>
+</div>
+</div>
+</div>
+<div className="col sm-12 md-2 lg-2 dotted">
 
 </div>
-                </div>
-            </Col>
-            {/* <Col sm={12} md={12} lg={6}>
-                <div>
-                    <video src="/video/colors.mp4" className="responsive" controls></video>
-                </div>
-            </Col> */}
-        </Grid>
 
-
-      </Container>
-
+</div>
 
 
 <div className="container padding-top-40">

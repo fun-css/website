@@ -11,8 +11,8 @@ function Sidebar() {
         path:""
     } ,
     {
-        text:"Themes",
-        path:"themes"
+        text:"Components",
+        path:"components"
     } ,
         {
             text:"Getting Started",

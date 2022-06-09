@@ -1,35 +1,14 @@
-import { useEffect } from 'react';
-const Button = ({
-text , 
-color,
-bg , 
-width, 
-height, 
-minHeight ,
-minWidth,
-margin,
-padding,
-fullWidth,
-funcss,
-children,
-}) => {
-    useEffect(()=>{
-        console.log(fullWidth)
-    })
+
+import React , {Component} from "react"
+export default class Button extends Component{
+render(){
 return ( 
-<button className={`button text-${color} ${bg} ${funcss}`} 
-style={{
-width:`${width}`, 
-height:`${height}`,
-minHeight:`${minHeight}`,
-minWidth:`${minWidth}`,
-margin:`${margin}`,
-padding:`${padding}`
-}}>
-{text}
-{children}
+<button className={`button text-${this.props.color} ${this.props.bg} ${this.props.funcss}`} onClick={this.props.onClick}>
+{this.props.startIcon} &nbsp;
+{this.props.text}
+{this.props.children} &nbsp;
+{this.props.endIcon}
 </button>
 );
 }
-
-export default Button;
+}

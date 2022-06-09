@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '../components/Footer';
 import  Head  from 'next/head';
 import Typography from "../Funcss/Components/Typography"
-import Breadcumb from "../Funcss/Components/Breadcumb"
+import Breadcrumb from "../Funcss/Components/Breadcrumb"
 import Link from "next/link"
 function Gettingstarted() {
 
@@ -38,7 +38,7 @@ function Gettingstarted() {
                   <Link href= "/">
                     <a>Home</a>
                   </Link>
-                  <Breadcumb type="slash" />
+                  <Breadcrumb type="slash" />
                   <Link href= "#">
                     <a>Gettingstarted</a>
                   </Link>
