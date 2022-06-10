@@ -1,15 +1,9 @@
 import React from "react"
-import Dropitem from "./Dropitem"
-const Dropdown = ()=>{
+const Dropdown = ({funcss, children})=>{
     return(
-        <div class="dropdown-hover text-white">
-    <div class="drop-button">
-        <button class="button indigo card text-white">DropDown Button</button>
-    </div>
-     <div class="drop-menu white item-hoverable text-black">
-        <Dropitem />
-     </div>
-</div>
+        <div className={`dropdown-hover ${funcss}`}>
+            {children}
+        </div>
     )
 }
 export default Dropdown

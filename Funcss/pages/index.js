@@ -10,6 +10,7 @@ import Button from "../Funcss/Components/Button"
 import Color from "../Funcss/Components/Color"
 import Container from "../Funcss/Components/Container"
 import Typography from "../Funcss/Components/Typography"
+import Icon from "../Funcss/Components/Icon"
 const Axios = require("axios")
 function Home() {
 const [comments, setcomments] = useState([])
@@ -111,20 +112,21 @@ size="large"
 <Col sm={12} md={10} lg={10} funcss="padding-20">
 <Typography size="bigger">
 <span className="text-indigo text-bigger">Don&apos;t Waste Time, </span>
-Grab A Component For Your React App.
+Use Pre-built Components.
     </Typography>
 <div className="width-400-max">
-<Typography size="medium" funcss="section" text={`
+<Typography funcss="section" text={`
 Make your code clean with our react components, just import to use for free.
 `}/>
 <Link href="/components">
 <a>
 <Button 
-text="Grab A Component"
+text="Our Components"
 color="white"
 bg="indigo"
 funcss="card h5 section"
 size="medium"
+startIcon={<Icon icon="fab fa-buffer"/>}
 />    
 </a>
 </Link>

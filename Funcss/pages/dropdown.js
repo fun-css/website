@@ -1,6 +1,11 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Head from "next/head"
+import Dropdown from '../Funcss/Components/Dropdown';
+import DropAction from '../Funcss/Components/DropMenu';
+import Button from '../Funcss/Components/Button';
+import DropMenu from './../Funcss/Components/DropMenu';
+import DropItem from './../Funcss/Components/Dropitem';
 function dropdown() {
     return (
         <section>
@@ -20,8 +25,8 @@ function dropdown() {
              <div id="container-8efab60a26b5c40a3a52aab9bdb98896">Ads</div>
              </div>
         <div className="section">
-          <a href="#simpledropdown" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Simple Dropdown</div></a>
-          <a href="#dropup" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Dropup</div></a> 
+          <a href="#scaleup" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Scaleup Animation</div></a>
+          <a href="#opacity" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Opacity</div></a> 
           <a href="#animateddropmenu" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Animated Drop Menu</div></a>        </div>
        </div>
            <div className="main-content">
@@ -77,40 +82,59 @@ function dropdown() {
             </table>
 </div>
        
-<div className="container padding-top-40" id="simpledropdown">
-<div className="h4 topic">Simple Dropdown</div>
-<div className="note">
-    The <span className="badge">dropdown-hover</span> class is use to create a simple hoverble dropdown.
-</div>
+<div className="container padding-top-40" id="scaleup">
+<div className="h4 topic">Simple Dropdown With Scaleup Animation</div>
 <div className="code">
 <xmp>
-{`
-<div class="dropdown-hover text-white">
-    <div class="drop-button">
-        <button class="button indigo card text-white">DropDown Button</button>
-    </div>
-     <div class="drop-menu white item-hoverable text-black">
-         <div class="drop-item">LinkOne</div>
-         <div class="drop-item">LinkTwo</div>
-         <div class="drop-item">LinkThree</div>
-         <div class="drop-item">LinkFour</div>
-     </div>
-</div>`}
+{`<Dropdown>
+        <Button text="Scale up Dropdown" color="success"/>
+    <DropMenu animation="ScaleUp" hoverable="hoverable" funcss="white" duration={1.5}>
+        <DropItem>Hello</DropItem>
+        <DropItem>Hello</DropItem>
+        <DropItem>Hello</DropItem>
+    </DropMenu>
+</Dropdown>
+`}
+</xmp>
+</div>
+<div className="preview">
+<Dropdown>
+        <Button text="Scale up Dropdown" color="success"/>
+    <DropMenu animation="ScaleUp" hoverable="hoverable" funcss="white" duration={1.5}>
+        <DropItem>Hello</DropItem>
+        <DropItem>Hello</DropItem>
+        <DropItem>Hello</DropItem>
+    </DropMenu>
+</Dropdown>
+
+
+</div>
+</div>
+<div className="container padding-top-40" id="opacity">
+<div className="h4 topic">Simple Dropdown With Opacity Animation</div>
+<div className="code">
+<xmp>
+{`<Dropdown>
+        <Button text="Opacity Dropdown" color="success"/>
+    <DropMenu animation="Opacity" hoverable="hoverable" funcss="white" duration={1.5}>
+        <DropItem>Hello</DropItem>
+        <DropItem>Hello</DropItem>
+        <DropItem>Hello</DropItem>
+    </DropMenu>
+</Dropdown>`}
 </xmp>
 </div>
 <div className="preview">
 
-<div className="dropdown-hover text-white">
-    <div className="drop-button">
-        <button className="button indigo card text-white">DropDown Button</button>
-    </div>
-     <div className="drop-menu white item-hoverable text-black">
-         <div className="drop-item">LinkOne</div>
-         <div className="drop-item">LinkTwo</div>
-         <div className="drop-item">LinkThree</div>
-         <div className="drop-item">LinkFour</div>
-     </div>
-</div>
+<Dropdown>
+        <Button text="Opacity Dropdown" color="success"/>
+    <DropMenu animation="Opacity" hoverable="hoverable" funcss="white" duration={1.5}>
+        <DropItem>Hello</DropItem>
+        <DropItem>Hello</DropItem>
+        <DropItem>Hello</DropItem>
+    </DropMenu>
+</Dropdown>
+
 
 </div>
 </div>

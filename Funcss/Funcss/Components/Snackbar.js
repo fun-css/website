@@ -1,35 +1,28 @@
 import { useEffect,useState } from "react"
-const Snackbar = ({message, close , timeOut , open ,position , funcss}) => {
-const [state, setstate] = useState(false)
-useEffect(() => {
-const snackbarDom = document.querySelector(".snackbar")
-if(timeOut > 0){
-setTimeout(() => {
-snackbarDom.style.display = "none" 
-}, timeOut);
-}
+const Snackbar = ({message, close , timeOut , open ,position , funcss , animation , duration}) => {
+const [state, setstate] = useState(true)
+
+// useEffect(() => {
+// if(open){
+// if(timeOut > 0){
+// setTimeout(() => {
+// setstate(false)
+// }, timeOut);
+// }
+
+// }
+// })
 if(open){
-snackbarDom.style.display = "block" 
-}else if (!open){
-snackbarDom.style.display = "none"   
-}
-
-
-})
-
 return ( 
 <div>
-<div className={`snackbar ${position} ${funcss}`}>
+<div className={`snackbar ${position} ${funcss}`} style={{animation:` ${duration}s ${animation}`}}>
 <div className="snackbar-content">
 <div className="snackbar-body">
 {message}
 </div>
 <div>
 <span className="close-snackbar">
-<span onClick={()=>{
-const snackbarDom = document.querySelector(".snackbar")
-snackbarDom.style.display = "none"  
-}}>{close}</span>
+<span>{close}</span>
 </span>
 </div>
 
@@ -37,6 +30,9 @@ snackbarDom.style.display = "none"
 </div>
 </div>
 );
+}else{
+    <div></div>
+}
 }
 
 export default Snackbar;

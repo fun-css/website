@@ -13,6 +13,7 @@ import Typography from './../Funcss/Components/Typography';
 import Middle from './../Funcss/Components/Middle';
 import Hr from './../Funcss/Components/Hr';
 import Section from './../Funcss/Components/Section';
+import Input from './../Funcss/Components/Input';
 function list() {
     return (
         <section>
@@ -34,9 +35,9 @@ function list() {
              </div>
         <div className="section">
           <a href="#simpleList" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Simple List</div></a>
-          <a href="#borderedList" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Bordered List</div></a> 
-          <a href="#strippedList" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Stripped List</div></a> 
-          <a href="#headedList" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">List With Header</div></a>
+          <a href="#iconicList" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Iconic List</div></a> 
+          <a href="#imageList" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Image List</div></a> 
+          <a href="#checkList" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Checkbox List</div></a>
           </div>
        </div>
            <div className="main-content">
@@ -61,12 +62,17 @@ function list() {
 </div>
 <div className="code">
    <xmp>
-{`<ul class="list">
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>FUN CSS</li>
-  <li>JAVASCRIPT</li>
-</ul>`}
+{`import List from 'Funcss/Components/List';
+import ListItem from 'Funcss/Components/ListItem';
+return(
+   <List>
+   <ListItem>HTML</ListItem>
+   <ListItem>CSS</ListItem>
+   <ListItem>FUN CSS</ListItem>
+   <ListItem>JAVASCRIPT</ListItem>
+   </List>
+   );
+`}
    </xmp>
 </div>
 <div className="preview">
@@ -76,6 +82,74 @@ function list() {
 <ListItem>FUN CSS</ListItem>
 <ListItem>JAVASCRIPT</ListItem>
 </List>
+</div>
+</div>
+       
+<div className="container padding-top-40" id="iconicList">
+<div className="h4 topic">Iconic List</div>
+
+<div className="react code">
+   <xmp>
+{`import List from 'Funcss/Components/List';
+import ListItem from 'Funcss/Components/ListItem';
+import RowFlex from 'Funcss/Components/RowFlex';
+import Div from 'Funcss/Components/Div';
+import Icon from 'Funcss/Components/Icon';
+import Card from 'Funcss/Components/Card';
+import Avatar from 'Funcss/Components/Avatar';
+import Typography from 'Funcss/Components/Typography';
+import Middle from 'Funcss/Components/Middle';
+import Hr from 'Funcss/Components/Hr';
+import Section from 'Funcss/Components/Section';
+
+return(
+<Card funcss="padding width-300-max">
+<List>
+<ListItem>
+   <RowFlex justify="space-between">
+      <Div>
+         <Avatar width="40px" height="40px" bg="light">
+         <Icon icon="fas fa-check" color="indigo" />
+         </Avatar>
+      </Div>
+      <Div funcss="padding">HTML Lesson</Div>
+      <Div funcss="padding">
+         <Icon icon="fas fa-trash" funcss="pointer hover-text-red"/>
+      </Div>
+   </RowFlex>
+</ListItem>
+<ListItem>
+   <RowFlex justify="space-between">
+      <Div>
+         <Avatar width="40px" height="40px" bg="light">
+         <Icon icon="fas fa-check" color="indigo" />
+         </Avatar>
+      </Div>
+      <Div funcss="padding">CSS Lesson</Div>
+      <Div funcss="padding">
+         <Icon icon="fas fa-trash" funcss="pointer hover-text-red"/>
+      </Div>
+   </RowFlex>
+</ListItem>
+<ListItem>
+   <RowFlex justify="space-between">
+      <Div>
+         <Avatar width="40px" height="40px" bg="light">
+         <Icon icon="fas fa-check" color="indigo" />
+         </Avatar>
+      </Div>
+      <Div funcss="padding">JAVASCRIPT Lesson</Div>
+      <Div funcss="padding">
+         <Icon icon="fas fa-trash" funcss="pointer hover-text-red"/>
+      </Div>
+   </RowFlex>
+</ListItem>
+
+</List>
+</Card>);`}
+   </xmp>
+</div>
+<div className="preview">
 <Card funcss="padding width-300-max">
 <List>
 <ListItem>
@@ -120,6 +194,77 @@ function list() {
 
 </List>
 </Card>
+</div>
+</div>
+       
+<div className="container padding-top-40" id="imageList">
+<div className="h4 topic">List With Images</div>
+<div className="code">
+   <xmp>
+{`
+import List from 'Funcss/Components/List';
+import ListItem from 'Funcss/Components/ListItem';
+import RowFlex from 'Funcss/Components/RowFlex';
+import Div from 'Funcss/Components/Div';
+import Icon from 'Funcss/Components/Icon';
+import Card from 'Funcss/Components/Card';
+import Avatar from 'Funcss/Components/Avatar';
+import Typography from 'Funcss/Components/Typography';
+import Middle from 'Funcss/Components/Middle';
+import Hr from 'Funcss/Components/Hr';
+import Section from 'Funcss/Components/Section';
+return(
+<Card funcss="padding width-400-max">
+<List>
+<ListItem>
+   <RowFlex justify="space-between">
+      <Div>
+        <Middle>
+        <img className="height-40 width-40 circle" src="/images/avatar.png" />
+        </Middle>
+      </Div>
+      <Div funcss="padding">
+        <Typography text="John Deo" heading="h5"/>
+        <Typography text="Funcss Framework - Making the web simple with our framework for free." />
+      <Section><Hr/></Section>
+      </Div>
+   </RowFlex>
+</ListItem>
+<ListItem>
+   <RowFlex justify="space-between">
+      <Div>
+        <Middle>
+        <img className="height-40 width-40 circle" src="/images/deo.jpg" />
+        </Middle>
+      </Div>
+      <Div funcss="padding">
+        <Typography text="John Deo" heading="h5"/>
+        <Typography text="Funcss Framework - Making the web simple with our framework for free." />
+        <Section><Hr/></Section>
+      </Div>
+   </RowFlex>
+</ListItem>
+<ListItem>
+   <RowFlex justify="space-between">
+      <Div>
+        <Middle>
+        <img className="height-40 width-40 circle" src="/images/jane.jpg" />
+        </Middle>
+      </Div>
+      <Div funcss="padding">
+        <Typography text="Jane Deo" heading="h5"/>
+        <Typography text="Funcss Framework - Making the web simple with our framework for free." />
+      </Div>
+   </RowFlex>
+</ListItem>
+
+</List>
+</Card>
+    );
+`}
+   </xmp>
+</div>
+<div className="preview">
 <Card funcss="padding width-400-max">
 <List>
 <ListItem>
@@ -169,92 +314,129 @@ function list() {
 
 </div>
 </div>
-       
-<div className="container padding-top-40" id="borderedList">
-<div className="h4 topic">Bordered List</div>
-<div className="note">
-   The <span className="badge">bordered</span> class is use to add a border to your list. You can also add a hoverable effect 
-   with the class of <span className="badge">hover</span>
-</div>
-<div className="code">
-   <xmp>
-{`<ul class="list bordered hover">
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>FUN CSS</li>
-    <li>JAVASCRIPT</li>
-</ul>`}
-   </xmp>
-</div>
-<div className="preview">
-<ul className="list bordered hover">
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>FUN CSS</li>
-    <li>JAVASCRIPT</li>
-</ul>  
-</div>
-</div>
-       
-<div className="container padding-top-40" id="strippedList">
-<div className="h4 topic">Stripped List</div>
-<div className="note">
-    The <span className="badge">stripped</span> class is use to create a stripped list. stripped list have an even background color 
-    distribution.
-</div>
-<div className="code">
-   <xmp>
-{`<ul class="list stripped">
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>FUN CSS</li>
-  <li>JAVASCRIPT</li>
-  <li>FUN CSS</li>
-  <li>REACT</li>
-</ul>`}
-   </xmp>
-</div>
-<div className="preview">
-<ul className="list stripped">
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>FUN CSS</li>
-    <li>JAVASCRIPT</li>
-    <li>FUN CSS</li>
-    <li>REACT</li>
-</ul>
-     
-</div>
-</div>
 
-<div className="container padding-top-40" id="headedList">
-<div className="h4 topic">List Header</div>
-<div className="note">
-  You can add a header to your list by using our <span className="badge">header</span> class.
-</div>
+<div className="container padding-top-40" id="checkList">
+<div className="h4 topic">List With Checkboxs</div>
+
 <div className="code">
    <xmp>
-{`<ul class="list stripped bordered">
- <li><h2>Courses</h2></li>
- <li>HTML</li>
- <li>CSS</li>
- <li>FUN CSS</li>
- <li>JAVASCRIPT</li>
- <li>FUN CSS</li>
- <li>REACT</li>
-</ul>`}
+{`import List from 'Funcss/Components/List';
+import ListItem from 'Funcss/Components/ListItem';
+import RowFlex from 'Funcss/Components/RowFlex';
+import Div from 'Funcss/Components/Div';
+import Icon from 'Funcss/Components/Icon';
+import Card from 'Funcss/Components/Card';
+import Avatar from 'Funcss/Components/Avatar';
+import Typography from 'Funcss/Components/Typography';
+import Middle from 'Funcss/Components/Middle';
+import Hr from 'Funcss/Components/Hr';
+import Section from 'Funcss/Components/Section';
+import Input from 'Funcss/Components/Input';
+
+return(
+<Card funcss="padding width-400-max">
+<List>
+<ListItem>
+<RowFlex justify="space-between" funcss="pointer">
+      <Div>
+        <Middle>
+        <img className="height-40 width-40 circle" src="/images/avatar.png" />
+        </Middle>
+      </Div>
+      <Div funcss="padding">
+        <Typography text="Funcss Framework - Making the web simple with our framework for free." />
+      </Div>
+      <Div funcss="padding">
+        <Input type="checkbox" funcss="width-20 height-20" />
+      </Div>
+   </RowFlex>
+</ListItem>
+<ListItem>
+<RowFlex justify="space-between" funcss="pointer">
+      <Div>
+        <Middle>
+        <img className="height-40 width-40 circle" src="/images/jane.jpg" />
+        </Middle>
+      </Div>
+      <Div funcss="padding">
+        <Typography text="Funcss Framework - Making the web simple with our framework for free." />
+      </Div>
+      <Div funcss="padding">
+        <Input type="checkbox" funcss="width-20 height-20" />
+      </Div>
+   </RowFlex>
+</ListItem>
+<ListItem>
+<RowFlex justify="space-between" funcss="pointer">
+      <Div>
+        <Middle>
+        <img className="height-40 width-40 circle" src="/images/deo.jpg" />
+        </Middle>
+      </Div>
+      <Div funcss="padding">
+        <Typography text="Funcss Framework - Making the web simple with our framework for free." />
+      </Div>
+      <Div funcss="padding">
+        <Input type="checkbox" funcss="width-20 height-20" />
+      </Div>
+   </RowFlex>
+</ListItem>
+
+</List>
+</Card>)`}
    </xmp>
 </div>
 <div className="preview">
-<ul className="list stripped bordered">
-    <li><div className="h2">Courses</div></li>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>FUN CSS</li>
-    <li>JAVASCRIPT</li>
-    <li>FUN CSS</li>
-    <li>REACT</li>
-</ul>
+<Card funcss="padding width-400-max">
+<List>
+<ListItem>
+<RowFlex justify="space-between" funcss="pointer">
+      <Div>
+        <Middle>
+        <img className="height-40 width-40 circle" src="/images/avatar.png" />
+        </Middle>
+      </Div>
+      <Div funcss="padding">
+        <Typography text="Funcss Framework - Making the web simple with our framework for free." />
+      </Div>
+      <Div funcss="padding">
+        <Input type="checkbox" funcss="width-20 height-20" />
+      </Div>
+   </RowFlex>
+</ListItem>
+<ListItem>
+<RowFlex justify="space-between" funcss="pointer">
+      <Div>
+        <Middle>
+        <img className="height-40 width-40 circle" src="/images/jane.jpg" />
+        </Middle>
+      </Div>
+      <Div funcss="padding">
+        <Typography text="Funcss Framework - Making the web simple with our framework for free." />
+      </Div>
+      <Div funcss="padding">
+        <Input type="checkbox" funcss="width-20 height-20" />
+      </Div>
+   </RowFlex>
+</ListItem>
+<ListItem>
+<RowFlex justify="space-between" funcss="pointer">
+      <Div>
+        <Middle>
+        <img className="height-40 width-40 circle" src="/images/deo.jpg" />
+        </Middle>
+      </Div>
+      <Div funcss="padding">
+        <Typography text="Funcss Framework - Making the web simple with our framework for free." />
+      </Div>
+      <Div funcss="padding">
+        <Input type="checkbox" funcss="width-20 height-20" />
+      </Div>
+   </RowFlex>
+</ListItem>
+
+</List>
+</Card>
 </div>
 </div>
 

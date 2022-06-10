@@ -2,6 +2,8 @@ import React from 'react';
 import Footer from '../components/Footer';
 import Head from 'next/head'
 import Input from './../Funcss/Components/Input';
+import IconicInput from './../Funcss/Components/IconicInput';
+import Icon from './../Funcss/Components/Icon';
 function input() {
     return (
         <section>
@@ -53,36 +55,53 @@ function input() {
     </div>
     <div className="code">
         <xmp>
- {`<input class="input full-width padding" placeholder="This is a simple input field." />`}
+ {`
+ import Input from 'Funcss/Components/Input';
+<Input type="text" label="This is a simple input" funcss="full-width"/>
+<Input type="text" bordered={true} label="This is a bordered" funcss="full-width section"/>
+ `}
         </xmp>
     </div>
     <div className="preview">
-
-<div className="card padding">
-<div className="text-larger padding">Simple Input Field</div>
-<Input type="text" label="This is my placeholder" funcss="full-width" simple="simple"/>
-</div>      
-
+    <Input type="text" label="This is a simple input" funcss="full-width"/>
+<Input type="text" bordered={true} label="This is a bordered" funcss="full-width section"/>
     </div>
 </div>
             
- <div className="container padding-top-40" id="borderedinput">
-    <div className="h4 topic">Bordered Input Field</div>
-    <div className="note">
-        The <span className="badge">bordered</span> class adds border to your input field.
-    </div>
-    <div className="code">
-        <xmp>
-            {`
-<input class="input bordered full-width padding" placeholder="This is a simple input field." />
-            `}
-        </xmp>
-    </div>
+ <div className="container padding-top-40" id="iconicInput">
+    <div className="h4 topic">Input With Icon</div>
+
+<div className="code">
+<xmp>
+{`import Input from 'Funcss/Components/Input';
+import IconicInput from 'Funcss/Components/IconicInput';
+import Icon from 'Funcss/Components/Icon';
+return(
+<div>
+<IconicInput funcss="section full-width" position="left" >
+<Input type="email" label="Enter your email" funcss="full-width" bordered={true}  />
+<Icon icon="far fa-user-circle" color="indigo" />
+</IconicInput>
+<IconicInput position="right" >
+<Input type="text" label="Enter your password" funcss="full-width" bordered={true}  />
+<Icon icon="far fa-eye" color="indigo"/>
+</IconicInput>
+</div>
+)
+`}
+</xmp>
+</div>
     <div className="preview">
 
 <div className="card padding">
-<div className="text-larger padding">Bordered Input Field</div>
-<input className="input full-width bordered padding" placeholder="This is a bordered input field." />
+<IconicInput funcss="section full-width" position="left" >
+<Input type="email" label="Enter your email" funcss="full-width" bordered={true}  />
+<Icon icon="far fa-user-circle" color="indigo" />
+</IconicInput>
+<IconicInput position="right" >
+<Input type="text" label="Enter your password" funcss="full-width" bordered={true}  />
+<Icon icon="far fa-eye" color="indigo"/>
+</IconicInput>
 </div>      
 
     </div>

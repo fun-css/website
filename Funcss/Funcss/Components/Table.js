@@ -5,8 +5,8 @@ return (
 {children}
 {
     showTotal &&
-<tr className="padding borderless text-bold">
-<td>  Total  {children.length - 1} </td>
+<tr className="borderless">
+<td className="padding borderless text-bold">  Total  {children.length - 1} </td>
 </tr>
 }
 </table>

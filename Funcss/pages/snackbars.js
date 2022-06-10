@@ -3,28 +3,19 @@ import { useState , useEffect } from 'react';
 import Footer from '../components/Footer';
 import Head from 'next/head';
 import Snackbar from '../Funcss/Components/Snackbar';
+import Button from '../Funcss/Components/Button';
 function Snackbars() {
-const [openSnackbar, setopenSnackbar] = useState(false)
-    const Snackbarstyle = "`${Snackbar}`"
-    useEffect(() => {
-     const Snackbar = document.querySelector(".snackbar")
-     const Snackbarclose = document.querySelector(".close-snackbar")
-     window.addEventListener("click" ,(e)=>{
-        if(e.target === Snackbar || e.target === Snackbarclose){
-           Snackbar.style.display = "none"
-        }
-     })
-   
-    })
-   //  react Snackbar
-
+   const [openSnackbar, setopenSnackbar] = useState(false)
+const [topRight, settopRight] = useState(false)
+const [topLeft, settopLeft] = useState(false)
+const [bottomRight, setbottomRight] = useState(false)
     return (
         <div>
                     <section>
 <Head>
    <title>Css Snackbars - Funcss Framework</title>
      <meta name='description' content='
-      Create nice css Snackbars with funcss framework, Snackbars can be use to create login or signup forms.
+    Snackbars displays short messages for users to know about the state of a particular process.
        ' />
     <meta
     name="keywords"
@@ -40,63 +31,40 @@ const [openSnackbar, setopenSnackbar] = useState(false)
        </div>
            <div className="main-content">
            <div className="container">
-        <h1 className="header h1 text-lighter text-indigo">
+        <h1 className="header text-indigo">
           Css Snackbar - Funcss Framework
         </h1>
-        <div className="h4">
-          Snackbars are can be use to show information on popup.
-          Create nice css Snackbars with funcss framework, Snackbars can be use to create login or signup forms.
-        </div>
-
-        <div className="section hr">
-
+        <div className="h5 width-500-max">
+        Snackbars displays short messages for users to know about the state of a particular process.
         </div>
        </div>
 
        
 <div className="container padding-top-40" id="introduction">
-<div className="h4 topic">Css Snackbar</div>
-<div className="note">
-    The <span className="badge">Snackbar</span> class is use to create a Snackbar.It wraps the <span className="badge">Snackbar-content</span> class.
-    which contains the content of your Snackbar
-</div>
-<div className="code">
-   <xmp>
-{`<button className="button indigo text-white card open-Snackbar" onClick="openSnackbar('mySnackbar')">Open Snackbar</button>
-<div class="snackbar" id='mySnackbar'>
-<div class="snackbar-content">
-<div>
-Welcome Snackbar
-</div>
-<div>
-<span class="close-snackbar">&times;</span>
-</div>
-</div>
-</div>`}
-   </xmp>
-</div>
+<div className="h4 topic">Snackbars</div>
 <div className="code react">
    <xmp>
-{`const App = ()=>{
+{`
+import Snackbar from 'Funcss/Components/Snackbar';
+import Button from 'Funcss/Components/Button';
+
+const App = ()=>{
 //  react Snackbar
-const openSnackbar = async(id)=>{
-const Snackbar = await document.querySelector("#" + id)
-Snackbar.style.display = "block"
-}
+const [openSnackbar, setopenSnackbar] = useState(false)
+const [topRight, settopRight] = useState(false)
+const [topLeft, settopLeft] = useState(false)
+const [bottomRight, setbottomRight] = useState(false)
 return(
 <div>
-<button className="button indigo text-white card open-Snackbar" onClick={()=>openSnackbar("mySnackbar")}>Open Snackbar</button>
-   <div className="snackbar" id='mySnackbar'>
-   <div className="snackbar-content">
-<div>
-Welcome Snackbar
-</div>
-<div>
-<span className="close-snackbar">&times;</span>
-</div>
+<Button  onClick={()=>setopenSnackbar(true)} color="success" text="Bottom Left"/>
+<Button  onClick={()=>setbottomRight(true)} color="success" text="Bottom Right"/>
+<Button  onClick={()=>settopRight(true)} color="success" text="Top Right"/>
+<Button  onClick={()=>settopLeft(true)} color="success" text="Top Left"/>
+<Snackbar position="default" close = {<span onClick={()=>setopenSnackbar(false)}>&times;</span>} message="Hi! - Welcome to my website" animation="SlideBottom" duration={0.5} open={openSnackbar} />
+<Snackbar position="bottom-right" close = {<span onClick={()=>setbottomRight(false)}>&times;</span>} message="Hi! - Welcome to my website" animation="ScaleUp" duration={0.5} open={bottomRight} />
+<Snackbar position="top-right" close = {<span onClick={()=>settopRight(false)}>&times;</span>} message="Hi! - Welcome to my website" animation="SlideTop" duration={0.5} open={topRight} />
+<Snackbar position="top-left" close = {<span onClick={()=>settopLeft(false)}>&times;</span>} message="Hi! - Welcome to my website" animation="Opacity" duration={0.5} open={topLeft} />
 
-   </div>
-   </div>
 </div>
 )
 }`}
@@ -104,20 +72,18 @@ Welcome Snackbar
 </div>
 
 <div className="preview" id="Snackbar">
-<button className="button indigo text-white card open-Snackbar" onClick={()=>setopenSnackbar(!openSnackbar)}>Open Snackbar</button>
-<Snackbar  close = "&times;" message="Welcome to my website" open={openSnackbar} timeOut={6000} />
+<Button  onClick={()=>setopenSnackbar(true)} color="success" text="Bottom Left"/>
+<Button  onClick={()=>setbottomRight(true)} color="success" text="Bottom Right"/>
+<Button  onClick={()=>settopRight(true)} color="success" text="Top Right"/>
+<Button  onClick={()=>settopLeft(true)} color="success" text="Top Left"/>
+<Snackbar position="default" close = {<span onClick={()=>setopenSnackbar(false)}>&times;</span>} message="Hi! - Welcome to my website" animation="SlideBottom" duration={0.5} open={openSnackbar} />
+<Snackbar position="bottom-right" close = {<span onClick={()=>setbottomRight(false)}>&times;</span>} message="Hi! - Welcome to my website" animation="ScaleUp" duration={0.5} open={bottomRight} />
+<Snackbar position="top-right" close = {<span onClick={()=>settopRight(false)}>&times;</span>} message="Hi! - Welcome to my website" animation="SlideTop" duration={0.5} open={topRight} />
+<Snackbar position="top-left" close = {<span onClick={()=>settopLeft(false)}>&times;</span>} message="Hi! - Welcome to my website" animation="Opacity" duration={0.5} open={topLeft} />
+
 </div>
 </div>
  
-
-<div className="container">
-<div className="note" id="note">
-    <div className="note-title">Note:</div>
-    <div>
-     Snackbars are good for Login forms, signup forms and displaying other relevant information to the user.
-    </div>
-</div>
-</div>
 
 <Footer />
 
