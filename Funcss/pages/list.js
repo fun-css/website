@@ -1,6 +1,18 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Head from 'next/head';
+import List from './../Funcss/Components/List';
+import ListItem from './../Funcss/Components/ListItem';
+import RowFlex from './../Funcss/Components/RowFlex';
+import Div from './../Funcss/Components/Div';
+import Icon from './../Funcss/Components/Icon';
+import Card from './../Funcss/Components/Card';
+import Button from './../Funcss/Components/Button';
+import Avatar from './../Funcss/Components/Avatar';
+import Typography from './../Funcss/Components/Typography';
+import Middle from './../Funcss/Components/Middle';
+import Hr from './../Funcss/Components/Hr';
+import Section from './../Funcss/Components/Section';
 function list() {
     return (
         <section>
@@ -58,13 +70,103 @@ function list() {
    </xmp>
 </div>
 <div className="preview">
-<ul className="list">
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>FUN CSS</li>
-    <li>JAVASCRIPT</li>
-</ul>
-        
+<List>
+<ListItem>HTML</ListItem>
+<ListItem>CSS</ListItem>
+<ListItem>FUN CSS</ListItem>
+<ListItem>JAVASCRIPT</ListItem>
+</List>
+<Card funcss="padding width-300-max">
+<List>
+<ListItem>
+   <RowFlex justify="space-between">
+      <Div>
+         <Avatar width="40px" height="40px" bg="light">
+         <Icon icon="fas fa-check" color="indigo" />
+         </Avatar>
+      </Div>
+      <Div funcss="padding">HTML Lesson</Div>
+      <Div funcss="padding">
+         <Icon icon="fas fa-trash" funcss="pointer hover-text-red"/>
+      </Div>
+   </RowFlex>
+</ListItem>
+<ListItem>
+   <RowFlex justify="space-between">
+      <Div>
+         <Avatar width="40px" height="40px" bg="light">
+         <Icon icon="fas fa-check" color="indigo" />
+         </Avatar>
+      </Div>
+      <Div funcss="padding">CSS Lesson</Div>
+      <Div funcss="padding">
+         <Icon icon="fas fa-trash" funcss="pointer hover-text-red"/>
+      </Div>
+   </RowFlex>
+</ListItem>
+<ListItem>
+   <RowFlex justify="space-between">
+      <Div>
+         <Avatar width="40px" height="40px" bg="light">
+         <Icon icon="fas fa-check" color="indigo" />
+         </Avatar>
+      </Div>
+      <Div funcss="padding">JAVASCRIPT Lesson</Div>
+      <Div funcss="padding">
+         <Icon icon="fas fa-trash" funcss="pointer hover-text-red"/>
+      </Div>
+   </RowFlex>
+</ListItem>
+
+</List>
+</Card>
+<Card funcss="padding width-400-max">
+<List>
+<ListItem>
+   <RowFlex justify="space-between">
+      <Div>
+        <Middle>
+        <img className="height-40 width-40 circle" src="/images/avatar.png" />
+        </Middle>
+      </Div>
+      <Div funcss="padding">
+        <Typography text="John Deo" heading="h5"/>
+        <Typography text="Funcss Framework - Making the web simple with our framework for free." />
+      <Section><Hr/></Section>
+      </Div>
+   </RowFlex>
+</ListItem>
+<ListItem>
+   <RowFlex justify="space-between">
+      <Div>
+        <Middle>
+        <img className="height-40 width-40 circle" src="/images/deo.jpg" />
+        </Middle>
+      </Div>
+      <Div funcss="padding">
+        <Typography text="John Deo" heading="h5"/>
+        <Typography text="Funcss Framework - Making the web simple with our framework for free." />
+        <Section><Hr/></Section>
+      </Div>
+   </RowFlex>
+</ListItem>
+<ListItem>
+   <RowFlex justify="space-between">
+      <Div>
+        <Middle>
+        <img className="height-40 width-40 circle" src="/images/jane.jpg" />
+        </Middle>
+      </Div>
+      <Div funcss="padding">
+        <Typography text="Jane Deo" heading="h5"/>
+        <Typography text="Funcss Framework - Making the web simple with our framework for free." />
+      </Div>
+   </RowFlex>
+</ListItem>
+
+</List>
+</Card>
+
 </div>
 </div>
        

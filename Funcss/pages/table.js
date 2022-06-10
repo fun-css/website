@@ -1,6 +1,14 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Head from "next/head"
+import Typography from "../Funcss/Components/Typography"
+import Breadcrumb from "../Funcss/Components/Breadcrumb"
+import Link from "next/link"
+import Table from './../Funcss/Components/Table';
+import TableHead from './../Funcss/Components/TableHead';
+import TableRow from './../Funcss/Components/TableRow';
+import TableData from './../Funcss/Components/TableData';
+
 function table() {
     return (
         <section>
@@ -30,16 +38,21 @@ function table() {
        </div>
            <div className="main-content">
            <div className="container">
-        <h1 className="header h1 text-lighter text-indigo">
+               
+        <Link href= "/">
+        <a>Home</a>
+        </Link>
+        <Breadcrumb type="slash" />
+        <Link href= "#">
+        <a>Tables</a>
+        </Link>
+        <h1 className="header text-indigo">
            Tables
         </h1>
-        <div className="h4">
+        <div className="h5 width-500-max">
          Tables group content in to rows and columns. Create nice and responsive css tables, create simple tables, stripped tables, hoverable table, borederd table and responsive table with funcss
         </div>
 
-        <div className="section hr">
-
-        </div>
        </div>
 
        
@@ -51,54 +64,84 @@ function table() {
 <div className="code">
    <xmp>
        {`
-<table class="table">
-<thead>
-    <th>course</th>
-    <th>votes</th>
-    <th>skills</th>
-</thead>
-<tr>
-    <td>HTML</td>
-    <td>66%</td>
-    <td>Very Good</td>
-</tr>
-<tr>
-    <td>CSS</td>
-    <td>99%</td>
-    <td>Excellent</td>
-</tr>
-<tr>
-    <td>JAVASCRIPT</td>
-    <td>50%</td>
-    <td>Good</td>
-</tr>
-</table>
+<Table className="table">
+<TableHead>
+    <TableData>course</TableData>
+    <TableData>votes</TableData>
+    <TableData>skills</TableData>
+</TableHead>
+<TableRow>
+    <TableData>HTML</TableData>
+    <TableData>66%</TableData>
+    <TableData>Very Good</TableData>
+</TableRow>
+<TableRow>
+    <TableData>CSS</TableData>
+    <TableData>99%</TableData>
+    <TableData>Excellent</TableData>
+</TableRow>
+<TableRow>
+    <TableData>JAVASCRIPT</TableData>
+    <TableData>50%</TableData>
+    <TableData>Good</TableData>
+</TableRow>
+<TableRow>
+    <TableData>HTML</TableData>
+    <TableData>66%</TableData>
+    <TableData>Very Good</TableData>
+</TableRow>
+<TableRow>
+    <TableData>CSS</TableData>
+    <TableData>99%</TableData>
+    <TableData>Excellent</TableData>
+</TableRow>
+<TableRow>
+    <TableData>JAVASCRIPT</TableData>
+    <TableData>50%</TableData>
+    <TableData>Good</TableData>
+</TableRow>
+</Table>
        `}
    </xmp>
 </div>
 <div className="preview">
-<table className="table">
-     <thead>
-         <th>course</th>
-         <th>votes</th>
-         <th>skills</th>
-     </thead>
-     <tr>
-         <td>HTML</td>
-         <td>66%</td>
-         <td>Very Good</td>
-     </tr>
-     <tr>
-         <td>CSS</td>
-         <td>99%</td>
-         <td>Excellent</td>
-     </tr>
-     <tr>
-         <td>JAVASCRIPT</td>
-         <td>50%</td>
-         <td>Good</td>
-     </tr>
-  </table>
+<Table >
+     <TableHead>
+         <TableData>course</TableData>
+         <TableData>votes</TableData>
+         <TableData>skills</TableData>
+     </TableHead>
+     <TableRow>
+         <TableData>HTML</TableData>
+         <TableData>66%</TableData>
+         <TableData>Very Good</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>CSS</TableData>
+         <TableData>99%</TableData>
+         <TableData>Excellent</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>JAVASCRIPT</TableData>
+         <TableData>50%</TableData>
+         <TableData>Good</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>HTML</TableData>
+         <TableData>66%</TableData>
+         <TableData>Very Good</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>CSS</TableData>
+         <TableData>99%</TableData>
+         <TableData>Excellent</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>JAVASCRIPT</TableData>
+         <TableData>50%</TableData>
+         <TableData>Good</TableData>
+     </TableRow>
+  </Table>
 </div>
 </div>
        
@@ -111,11 +154,11 @@ function table() {
    <xmp>
        {`
 <table class="table stripped">
-<thead>
+<TableHead>
     <th>course</th>
     <th>votes</th>
     <th>skills</th>
-</thead>
+</TableHead>
 <tr>
     <td>HTML</td>
     <td>66%</td>
@@ -136,28 +179,43 @@ function table() {
    </xmp>
 </div>
 <div className="preview">
-<table className="table stripped">
-     <thead>
-         <th>course</th>
-         <th>votes</th>
-         <th>skills</th>
-     </thead>
-     <tr>
-         <td>HTML</td>
-         <td>66%</td>
-         <td>Very Good</td>
-     </tr>
-     <tr>
-         <td>CSS</td>
-         <td>99%</td>
-         <td>Excellent</td>
-     </tr>
-     <tr>
-         <td>JAVASCRIPT</td>
-         <td>50%</td>
-         <td>Good</td>
-     </tr>
-  </table>
+<Table stripped="stripped">
+     <TableHead>
+         <TableData>course</TableData>
+         <TableData>votes</TableData>
+         <TableData>skills</TableData>
+     </TableHead>
+     <TableRow>
+         <TableData>HTML</TableData>
+         <TableData>66%</TableData>
+         <TableData>Very Good</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>CSS</TableData>
+         <TableData>99%</TableData>
+         <TableData>Excellent</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>JAVASCRIPT</TableData>
+         <TableData>50%</TableData>
+         <TableData>Good</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>HTML</TableData>
+         <TableData>66%</TableData>
+         <TableData>Very Good</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>CSS</TableData>
+         <TableData>99%</TableData>
+         <TableData>Excellent</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>JAVASCRIPT</TableData>
+         <TableData>50%</TableData>
+         <TableData>Good</TableData>
+     </TableRow>
+  </Table>
 </div>
 </div>
        
@@ -170,11 +228,11 @@ function table() {
    <xmp>
        {`
 <table class="table stripped hoverable">
-<thead>
+<TableHead>
     <th>course</th>
     <th>votes</th>
     <th>skills</th>
-</thead>
+</TableHead>
 <tr>
     <td>HTML</td>
     <td>66%</td>
@@ -195,29 +253,43 @@ function table() {
    </xmp>
 </div>
 <div className="preview">
-<table className="table stripped hoverable">
-     <thead>
-         <th>course</th>
-         <th>votes</th>
-         <th>skills</th>
-     </thead>
-     <tr>
-         <td>HTML</td>
-         <td>66%</td>
-         <td>Very Good</td>
-     </tr>
-     <tr>
-         <td>CSS</td>
-         <td>99%</td>
-         <td>Excellent</td>
-     </tr>
-     <tr>
-         <td>JAVASCRIPT</td>
-         <td>50%</td>
-         <td>Good</td>
-     </tr>
-  </table>
-
+<Table hoverable="hoverable">
+     <TableHead>
+         <TableData>course</TableData>
+         <TableData>votes</TableData>
+         <TableData>skills</TableData>
+     </TableHead>
+     <TableRow>
+         <TableData>HTML</TableData>
+         <TableData>66%</TableData>
+         <TableData>Very Good</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>CSS</TableData>
+         <TableData>99%</TableData>
+         <TableData>Excellent</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>JAVASCRIPT</TableData>
+         <TableData>50%</TableData>
+         <TableData>Good</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>HTML</TableData>
+         <TableData>66%</TableData>
+         <TableData>Very Good</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>CSS</TableData>
+         <TableData>99%</TableData>
+         <TableData>Excellent</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>JAVASCRIPT</TableData>
+         <TableData>50%</TableData>
+         <TableData>Good</TableData>
+     </TableRow>
+  </Table>
 </div>
 </div>
 <div className="container padding-top-40" id="borderedTable">
@@ -229,11 +301,11 @@ function table() {
    <xmp>
        {`
 <table class="table stripped hoverable bordered">
-<thead>
+<TableHead>
     <th>course</th>
     <th>votes</th>
     <th>skills</th>
-</thead>
+</TableHead>
 <tr>
     <td>HTML</td>
     <td>66%</td>
@@ -254,28 +326,43 @@ function table() {
    </xmp>
 </div>
 <div className="preview">
-<table className="table stripped hoverable bordered">
-     <thead>
-         <th>course</th>
-         <th>votes</th>
-         <th>skills</th>
-     </thead>
-     <tr>
-         <td>HTML</td>
-         <td>66%</td>
-         <td>Very Good</td>
-     </tr>
-     <tr>
-         <td>CSS</td>
-         <td>99%</td>
-         <td>Excellent</td>
-     </tr>
-     <tr>
-         <td>JAVASCRIPT</td>
-         <td>50%</td>
-         <td>Good</td>
-     </tr>
-  </table>
+<Table bordered="bordered" showTotal={true}>
+     <TableHead funcss="black text-white">
+         <TableData>course</TableData>
+         <TableData>votes</TableData>
+         <TableData>skills</TableData>
+     </TableHead>
+     <TableRow>
+         <TableData>HTML</TableData>
+         <TableData>66%</TableData>
+         <TableData>Very Good</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>CSS</TableData>
+         <TableData>99%</TableData>
+         <TableData>Excellent</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>JAVASCRIPT</TableData>
+         <TableData>50%</TableData>
+         <TableData>Good</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>HTML</TableData>
+         <TableData>66%</TableData>
+         <TableData>Very Good</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>CSS</TableData>
+         <TableData>99%</TableData>
+         <TableData>Excellent</TableData>
+     </TableRow>
+     <TableRow>
+         <TableData>JAVASCRIPT</TableData>
+         <TableData>50%</TableData>
+         <TableData>Good</TableData>
+     </TableRow>
+  </Table>
 
 </div>
 </div>
@@ -353,7 +440,7 @@ function table() {
 <div className="preview">
 
 <div className="horizontal-scroll">
-<table className="table stripped text-small">
+<table className="table ">
 <tr>
       <th>First Name</th>
       <th>Last Name</th>

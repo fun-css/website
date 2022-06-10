@@ -5,14 +5,14 @@ render(){
 return ( 
 <input className={`
 input
-label-${this.props.label}
 ${this.props.funcss}
+${this.props.simple}
 `} 
 onChange={this.props.onChange}
 defaultValue = {this.props.defaultValue}
 type={this.props.type}
+placeholder={this.props.label}
  />
-
 
 );
 }

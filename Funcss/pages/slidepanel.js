@@ -1,6 +1,14 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Head from 'next/head';
+import Slidepanel from './../Funcss/Components/Slidepanel';
+import Panelcontent from '../Funcss/Components/Panelcontent';
+import Panelfront from './../Funcss/Components/Panelfront';
+import Middle from './../Funcss/Components/Middle';
+import Div from './../Funcss/Components/Div';
+import Typography from './../Funcss/Components/Typography';
+import Icon from './../Funcss/Components/Icon';
+import Button from './../Funcss/Components/Button';
 function Slidepanels() {
     return (
         <section>
@@ -114,17 +122,61 @@ The <span className="badge"> slide-top </span> class is use to create a slide an
 </center>`}
         </xmp>
     </div>
+    <div className="code react">
+        <xmp>
+{`
+import Slidepanel from 'Funcss/Components/Slidepanel';
+import Panelcontent from 'Funcss/Components/Panelcontent';
+import Panelfront from 'Funcss/Components/Panelfront';
+import Middle from 'Funcss/Components/Middle';
+import Div from 'Funcss/Components/Div';
+import Typography from 'Funcss/Components/Typography';
+import Icon from 'Funcss/Components/Icon';
+
+<Slidepanel slide="top" funcss="width-300">
+    <Panelcontent>
+        <Middle funcss="indigo text-white">
+        <Div funcss="padding-20">
+            <Div funcss="white text-indigo"><Typography text="Jhon Deo section" heading="h3" /></Div>
+            <Typography funcss="section" text={"Lorem ipsum, dolor sit amet consectetur adipisicing elit.Cumque ipsam non animi blanditiis. Ducimus alias minima repudiandae"} />
+            <Div>
+                <Icon funcss="pointer padding" icon="fab fa-facebook"/>
+                <Icon funcss="pointer padding" icon="fab fa-instagram"/>
+                <Icon funcss="pointer padding" icon="fab fa-twitter"/>
+            </Div>
+        </Div>
+        </Middle>
+    </Panelcontent>
+    <Panelfront>
+<img src="/images/avatar.png" alt="" className="width-100-p height-100-p" />
+    </Panelfront>
+</Slidepanel>  `}
+        </xmp>
+    </div>
     <div className="preview">
 <center> 
-<div className="padding text-larger">slide panel top</div>
-
-<div className="slide-panel slide-top fit-height width-200">
-    <div className="slide-panel-content indigo text-center padding opacity-1 text-white">
-    <div className="text-larger">Jhon Deo</div>
- Laboriosam ex nostrum ad aperiam cumque eveniet magni recusandae.
-    </div>
-    <img src="/images/avatar.png" alt="" className="slide-panel-image width-100-p height-100-p" />
-</div>      
+<div className="padding h2">slide panel top</div>
+<Slidepanel slide="top" funcss="width-300">
+    <Panelcontent>
+        <Middle funcss="indigo text-white">
+        <Div funcss="padding-20">
+            <Div funcss="white text-indigo"><Typography text="Jhon Deo section" heading="h3" /></Div>
+            <Typography funcss="section" text={`
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Cumque ipsam non animi blanditiis. Ducimus alias minima repudiandae
+            `} />
+            <Div>
+                <Icon funcss="pointer padding" icon="fab fa-facebook"/>
+                <Icon funcss="pointer padding" icon="fab fa-instagram"/>
+                <Icon funcss="pointer padding" icon="fab fa-twitter"/>
+            </Div>
+        </Div>
+        </Middle>
+    </Panelcontent>
+    <Panelfront>
+<img src="/images/avatar.png" alt="" className="width-100-p height-100-p" />
+    </Panelfront>
+</Slidepanel>   
 </center>
 
     </div>
@@ -151,14 +203,28 @@ The <span className="badge"> slide-bottom </span> class is use to create a slide
     </div>
     <div className="preview">
 <center> 
-<div className="padding text-larger">slide panel Bottom</div>
-<div className="slide-panel slide-bottom fit-height width-200">
-    <div className="slide-panel-content indigo text-center padding opacity-1 text-white">
-    <div className="text-larger">Jhon Deo</div>
- Laboriosam ex nostrum ad aperiam cumque eveniet magni recusandae.
-    </div>
-    <img src="/images/avatar.png" alt="" className="slide-panel-image width-100-p height-100-p" />
-</div>      
+<div className="padding h3">slide panel Bottom</div>
+<Slidepanel slide="bottom" funcss="width-300">
+    <Panelcontent>
+        <Middle funcss="indigo text-white">
+        <Div funcss="padding-20">
+            <Div funcss="white text-indigo"><Typography text="Jhon Deo section" heading="h3" /></Div>
+            <Typography funcss="section" text={`
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Cumque ipsam non animi blanditiis. Ducimus alias minima repudiandae
+            `} />
+            <Div>
+                <Icon funcss="pointer padding" icon="fab fa-facebook"/>
+                <Icon funcss="pointer padding" icon="fab fa-instagram"/>
+                <Icon funcss="pointer padding" icon="fab fa-twitter"/>
+            </Div>
+        </Div>
+        </Middle>
+    </Panelcontent>
+    <Panelfront>
+<img src="/images/avatar.png" alt="" className="width-100-p height-100-p" />
+    </Panelfront>
+</Slidepanel>      
 </center>
 
     </div>
@@ -188,14 +254,28 @@ The <span className="badge"> slide-left </span> class is use to create a slide a
     </div>
     <div className="preview">
 <center> 
-<div className="padding text-larger">slide panel Left</div>
-<div className="slide-panel slide-left fit-height width-200">
-    <div className="slide-panel-content deep-purple text-center padding opacity-1 text-white">
-    <div className="text-larger">Jhon Deo</div>
- Laboriosam ex nostrum ad aperiam cumque eveniet magni recusandae.
-    </div>
-    <img src="/images/avatar.png" alt="" className="slide-panel-image width-100-p height-100-p" />
-</div>      
+<div className="padding h3">slide panel Left</div>
+<Slidepanel slide="left" funcss="width-300">
+    <Panelcontent>
+        <Middle funcss="indigo text-white">
+        <Div funcss="padding-20">
+            <Div funcss="white text-indigo"><Typography text="Jhon Deo section" heading="h3" /></Div>
+            <Typography funcss="section" text={`
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Cumque ipsam non animi blanditiis. Ducimus alias minima repudiandae
+            `} />
+            <Div>
+                <Icon funcss="pointer padding" icon="fab fa-facebook"/>
+                <Icon funcss="pointer padding" icon="fab fa-instagram"/>
+                <Icon funcss="pointer padding" icon="fab fa-twitter"/>
+            </Div>
+        </Div>
+        </Middle>
+    </Panelcontent>
+    <Panelfront>
+<img src="/images/avatar.png" alt="" className="width-100-p height-100-p" />
+    </Panelfront>
+</Slidepanel>  
 </center>
 
     </div>
@@ -222,14 +302,28 @@ The <span className="badge"> slide-right </span> class is use to create a slide 
     </div>
     <div className="preview">
 <center> 
-<div className="padding text-larger">slide panel Right</div>
-<div className="slide-panel slide-right fit-height width-200">
-    <div className="slide-panel-content deep-purple text-center padding opacity-1 text-white">
-    <div className="text-larger">Jhon Deo</div>
- Laboriosam ex nostrum ad aperiam cumque eveniet magni recusandae.
-    </div>
-    <img src="/images/avatar.png" alt="" className="slide-panel-image width-100-p height-100-p" />
-</div>      
+<div className="padding h3">slide panel Right</div>
+<Slidepanel slide="right" funcss="width-300">
+    <Panelcontent>
+        <Middle funcss="indigo text-white">
+        <Div funcss="padding-20">
+            <Div funcss="white text-indigo"><Typography text="Jhon Deo section" heading="h3" /></Div>
+            <Typography funcss="section" text={`
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Cumque ipsam non animi blanditiis. Ducimus alias minima repudiandae
+            `} />
+            <Div>
+                <Icon funcss="pointer padding" icon="fab fa-facebook"/>
+                <Icon funcss="pointer padding" icon="fab fa-instagram"/>
+                <Icon funcss="pointer padding" icon="fab fa-twitter"/>
+            </Div>
+        </Div>
+        </Middle>
+    </Panelcontent>
+    <Panelfront>
+<img src="/images/avatar.png" alt="" className="width-100-p height-100-p" />
+    </Panelfront>
+</Slidepanel>     
 </center>
 
     </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Head from 'next/head'
+import Input from './../Funcss/Components/Input';
 function input() {
     return (
         <section>
@@ -59,7 +60,7 @@ function input() {
 
 <div className="card padding">
 <div className="text-larger padding">Simple Input Field</div>
-<input className="input full-width padding" placeholder="This is a simple input field." />
+<Input type="text" label="This is my placeholder" funcss="full-width" simple="simple"/>
 </div>      
 
     </div>
