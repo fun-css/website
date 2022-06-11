@@ -36,3 +36,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 =======
 # funweb
 >>>>>>> 4418c982021cbcbe2ccd877d1384eb219d876e6e
+import Dropdown from 'Funcss/Components/Dropdown';
+import Button from 'Funcss/Components/Button';
+import DropMenu from 'Funcss/Components/DropMenu';
+import DropItem from 'Funcss/Components/Dropitem';

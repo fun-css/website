@@ -51,7 +51,7 @@ Components saves your time when coding, use premium components for free.
         </Link>
     </Col>
     <Col sm={12} md={4} lg={3} funcss="padding">
-        <Link href="/components/hero">
+        <Link href="/components/forms">
             <a>
             <Div funcss="round-edge border pointer text-center">
            <Div funcss="padding text-center" content={
@@ -63,7 +63,7 @@ Components saves your time when coding, use premium components for free.
              />
          }/>
          <Div funcss="padding" content={
-             <Typography text="About Sections" funcss="text-bold"/>
+             <Typography text="Forms" funcss="text-bold"/>
          }/>
         </Div>
         </a>

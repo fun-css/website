@@ -2,10 +2,10 @@ import React from 'react';
 import Footer from '../components/Footer';
 import Head from "next/head"
 import Dropdown from '../Funcss/Components/Dropdown';
-import DropAction from '../Funcss/Components/DropMenu';
 import Button from '../Funcss/Components/Button';
 import DropMenu from './../Funcss/Components/DropMenu';
 import DropItem from './../Funcss/Components/Dropitem';
+import Dropup from './../Funcss/Components/Dropup';
 function dropdown() {
     return (
         <section>
@@ -25,23 +25,20 @@ function dropdown() {
              <div id="container-8efab60a26b5c40a3a52aab9bdb98896">Ads</div>
              </div>
         <div className="section">
-          <a href="#scaleup" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Scaleup Animation</div></a>
-          <a href="#opacity" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Opacity</div></a> 
-          <a href="#animateddropmenu" className="link text-black block"> <div className="padding text-lighter hover-left-indigo right-link">Animated Drop Menu</div></a>        </div>
+          <a href="#scaleup" className="link text-black block"> <div className="padding  hover-left-indigo right-link">Scaleup Dropdown</div></a>
+          <a href="#opacity" className="link text-black block"> <div className="padding  hover-left-indigo right-link">Opacity Dropdown</div></a> 
+          <a href="#dropup" className="link text-black block"> <div className="padding  hover-left-indigo right-link">Drop Up</div></a>        </div>
        </div>
            <div className="main-content">
            <div className="container">
         <h1 className="header text-indigo">
          Css Dropdown And Dropup - Funcss Framework
         </h1>
-        <div className="h4">
+        <div className="h5">
         Dropdowns are usuallly use on the navigation bar, they hold 
         content which can be seen when you hover or click on them.
         </div>
 
-        <div className="section hr">
-
-        </div>
        </div>
 
 <div className="container">
@@ -86,7 +83,11 @@ function dropdown() {
 <div className="h4 topic">Simple Dropdown With Scaleup Animation</div>
 <div className="code">
 <xmp>
-{`<Dropdown>
+{`import Dropdown from 'Funcss/Components/Dropdown';
+import Button from 'Funcss/Components/Button';
+import DropMenu from 'Funcss/Components/DropMenu';
+import DropItem from 'Funcss/Components/Dropitem';
+<Dropdown>
         <Button text="Scale up Dropdown" color="success"/>
     <DropMenu animation="ScaleUp" hoverable="hoverable" funcss="white" duration={1.5}>
         <DropItem>Hello</DropItem>
@@ -114,7 +115,11 @@ function dropdown() {
 <div className="h4 topic">Simple Dropdown With Opacity Animation</div>
 <div className="code">
 <xmp>
-{`<Dropdown>
+{`import Dropdown from 'Funcss/Components/Dropdown';
+import Button from 'Funcss/Components/Button';
+import DropMenu from 'Funcss/Components/DropMenu';
+import DropItem from 'Funcss/Components/Dropitem';
+<Dropdown>
         <Button text="Opacity Dropdown" color="success"/>
     <DropMenu animation="Opacity" hoverable="hoverable" funcss="white" duration={1.5}>
         <DropItem>Hello</DropItem>
@@ -146,87 +151,35 @@ function dropdown() {
 </div>
 <div className="code">
    <xmp>
-{`<div class="dropup-hover text-white">
-    <div class="drop-button">
-        <button class="button white card">DropUp Button</button>
-    </div>
-     <div class="drop-menu white item-hoverable text-black">
-         <div class="drop-item">LinkOne</div>
-         <div class="drop-item">LinkTwo</div>
-         <div class="drop-item">LinkThree</div>
-         <div class="drop-item">LinkFour</div>
-     </div>
-</div>`}
+{`import Dropup from 'Funcss/Components/Dropup';
+import Button from 'Funcss/Components/Button';
+import DropMenu from 'Funcss/Components/DropMenu';
+import DropItem from 'Funcss/Components/Dropitem';
+<Dropup>
+        <Button text="Drop Up" color="success"/>
+    <DropMenu animation="ScaleUp" hoverable="hoverable" funcss="white" duration={1.5}>
+        <DropItem>Hello</DropItem>
+        <DropItem>Hello</DropItem>
+        <DropItem>Hello</DropItem>
+    </DropMenu>
+</Dropup>
+`}
    </xmp>
 </div>
 <div className="preview">
-<div className="dropup-hover text-white">
-    <div className="drop-button">
-        <button className="button white card">DropUp Button</button>
-    </div>
-     <div className="drop-menu white item-hoverable text-black">
-         <div className="drop-item">LinkOne</div>
-         <div className="drop-item">LinkTwo</div>
-         <div className="drop-item">LinkThree</div>
-         <div className="drop-item">LinkFour</div>
-     </div>
+<Dropup>
+        <Button text="Drop Up" color="success"/>
+    <DropMenu animation="ScaleUp" hoverable="hoverable" funcss="white" duration={1.5}>
+        <DropItem>Hello</DropItem>
+        <DropItem>Hello</DropItem>
+        <DropItem>Hello</DropItem>
+    </DropMenu>
+</Dropup>
+
+
 </div>
 </div>
-</div>
-<div className="container padding-top-40" id="animateddropmenu">
-<div className="h4 topic">Animated Drop Menu</div>
-<div className="note">
-   The <span className="badge">rotate-up</span> and <span className="badge">rotate-down</span> class is use to create a rotating animated button.
-</div>
-<div className="code">
-   <xmp>
-{`<div class="row-flex">
-<div class="dropup-hover">
-    <button class="button blue text-white drop-button"> Hover Up <i class="fas fa-angle-down rotate-up"></i></button>
-     <div class="drop-menu white item-hoverable text-black fit-width">
-         <div class="drop-item">LinkOne</div>
-         <div class="drop-item">LinkTwo</div>
-         <div class="drop-item">LinkThree</div>
-         <div class="drop-item">LinkFour</div>
-     </div>
-</div>
-<div class="dropdown-hover">
-    <button class="button blue text-white drop-button"> Hover down <i class="fas fa-angle-up rotate-down"></i></button>
-     <div class="drop-menu white item-hoverable text-black fit-width">
-         <div class="drop-item">LinkOne</div>
-         <div class="drop-item">LinkTwo</div>
-         <div class="drop-item">LinkThree</div>
-         <div class="drop-item">LinkFour</div>
-     </div>
-</div>
-</div>`}
-   </xmp>
-</div>
-<div className="preview">
-<div className="card padding">
-<div className="row-flex">
-<div className="dropup-hover">
-    <button className="button blue text-white drop-button"> Hover Up <i className="fas fa-angle-down rotate-up"></i></button>
-     <div className="drop-menu white item-hoverable text-black fit-width">
-         <div className="drop-item">LinkOne</div>
-         <div className="drop-item">LinkTwo</div>
-         <div className="drop-item">LinkThree</div>
-         <div className="drop-item">LinkFour</div>
-     </div>
-</div>
-<div className="dropdown-hover">
-    <button className="button blue text-white drop-button"> Hover down <i className="fas fa-angle-up rotate-down"></i></button>
-     <div className="drop-menu white item-hoverable text-black fit-width">
-         <div className="drop-item">LinkOne</div>
-         <div className="drop-item">LinkTwo</div>
-         <div className="drop-item">LinkThree</div>
-         <div className="drop-item">LinkFour</div>
-     </div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
   
 
 <Footer />

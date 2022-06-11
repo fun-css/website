@@ -16,7 +16,7 @@ button{-webkit-appearance:button}link{text-decoration: none;}link:hover{text-dec
 .info,.hover-info:hover{  background-color: rgb(229, 246, 253);}
 .warning,.hover-warning:hover{background-color: rgba(220, 128, 1, 0.8);}
 .danger,.error,.hover-danger:hover{background-color: rgba(220, 17, 1, 0.8);}
-
+/* .input:focus{border: 1.5px solid rgba(7, 149, 66, 0.8);} */
 .success-outline{border:1px solid rgba(7, 149, 66, 0.8)}
 .info-outline{border:1px solid rgb(229, 246, 253);}
 .warning-outline{border:1px solid rgba(220, 128, 1, 0.8);}
@@ -120,7 +120,7 @@ button{-webkit-appearance:button}link{text-decoration: none;}link:hover{text-dec
 .margin-right-70{margin-right: 70px !important;}.margin-right-80{margin-right: 80px !important;}.margin-right-90{margin-right: 90px !important;}
 .margin-right-100{margin-bottom: 100px;}
 /*padding*/
-.padding{padding: 10px !important;};
+.padding{padding: 10px !important;};.padding-5{padding: 5px;}
 .padding-top-10{padding-top: 10px !important;}.padding-top-20{padding-top: 20px !important;}.padding-top-30{padding-top: 30px !important;}
 .padding-top-40{padding-top: 40px !important;}.padding-top-50{padding-top: 50px !important;}.padding-top-60{padding-top: 60px !important;}
 .padding-top-70{padding-top: 70px !important;}.padding-top-80{padding-top: 80px !important;}.padding-top-90{padding-top: 90px !important;}
@@ -397,10 +397,7 @@ z-index: 100;width: 100%;height: 100%;min-height:100vh;transition: 0.5s;}
 @media (max-width:600px){.hide-small{display: none;}.show-small{display: block;}.hide-medium{display:block;}.hide-medium-down{display: none;}.show-medium{display: none;}.show-medium-up{display: none;}.show-medium-down{display: block;}.hide-medium-up{display: block;}.show-large{display: none;}}
 @media (min-width:601px){.hide-medium{display: none;}.hide-small{display: block;}.show-small{display: none;}.hide-medium-down{display: none;}.show-medium-down{display:block;}.hide-medium-up{display: none;}.show-medium{display: block;}.show-large{display: none;}}
 @media (min-width:993px){.show-large{display: block;}.hide-medium{display: block;}.hide-small{display: block;}.show-small{display: none;}.hide-medium-down{display: block;}.show-medium{display: none;}.hide-large{display: none;}.show-medium-down{display: none;};.hide-medium-up{display: none;}}
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
+
 
 /* darken */
 .darken-10{background-color: rgba(0,0,0,0.1);}
@@ -414,79 +411,56 @@ z-index: 100;width: 100%;height: 100%;min-height:100vh;transition: 0.5s;}
 .darken-2{background-color: rgba(0,0,0,0.2);}
 .darken-1{background-color: rgba(0,0,0,0.1);}
 
-.tooltip .tip-top {
-  visibility: hidden;
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tip{
+  display: none;
   width: 100px;
   background-color: #555;
   color: #fff;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 3px;
   padding: 5px 0;
   position: absolute;
   z-index: 1;
+  transition: opacity 0.3s;
+  font-size:small;
+}
+.tooltip .tip-top {
   bottom: 125%;
   left: 50%;
   margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
-  font-size:small;
 }
 
 
 .tooltip:hover .tip-top {
-  visibility: visible;
-  opacity: 1;
+  display: inline-block;
 }
 
 .tooltip .tip-bottom {
-  visibility: hidden;
-  width: 100px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  font-size:small;
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-  top: 100%;
+  top: 120%;
   left: 50%;
   margin-left: -60px;
 }
 
 .tooltip:hover .tip-bottom {
-  visibility: visible;
+  display: inline-block;
 }
 
 .tooltip .tip-right {
-  visibility: hidden;
-  width: 100px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
   top: -5px;
   left: 105%;
   font-size:small;
 }
 
 .tooltip:hover .tip-right {
-  visibility: visible;
+  display: inline-block;
 }
 
 .tooltip .tip-left {
-  visibility: hidden;
-  width: 100px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  font-size:small;
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
@@ -494,7 +468,7 @@ z-index: 100;width: 100%;height: 100%;min-height:100vh;transition: 0.5s;}
   right: 105%;
 }
 .tooltip:hover .tip-left {
-  visibility: visible;
+  display: inline-block;
 }
 .accordion li{
   list-style: none;

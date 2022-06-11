@@ -1,7 +1,13 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import  Head from 'next/head';
-
+import ToolTip from '../Funcss/Components/ToolTip';
+import Button from '../Funcss/Components/Button';
+import Tip from '../Funcss/Components/Tip';
+import Table from './../Funcss/Components/Table';
+import TableHead from './../Funcss/Components/TableHead';
+import TableRow from './../Funcss/Components/TableRow';
+import TableData from './../Funcss/Components/TableData';
 function tooltip(props) {
     return (
         <section>
@@ -29,17 +35,41 @@ function tooltip(props) {
        </div>
            <div className="main-content">
            <div className="container">
-        <h1 className="header h1 text-lighter text-indigo">
+        <h1 className="header text-indigo">
           Css Tooltip - Funcss Framework
         </h1>
-        <div className="h4">
+        <div className="h5 width-500-max">
          Tooltips provides information about a particular element when you hover on that element.
         </div>
-
-        <div className="section hr">
-
-        </div>
+        <Table className="table">
+<TableHead>
+    <TableData>Prop</TableData>
+    <TableData>Description</TableData>
+    <TableData>Value</TableData>
+</TableHead>
+<TableRow>
+    <TableData>tip</TableData>
+    <TableData>Defines the position of your tip</TableData>
+    <TableData>top , bottom , left , right</TableData>
+</TableRow>
+<TableRow>
+    <TableData>animation</TableData>
+    <TableData>animate tip</TableData>
+    <TableData>ScaleUp , Opacity</TableData>
+</TableRow>
+<TableRow>
+    <TableData>duration</TableData>
+    <TableData>animation duration</TableData>
+    <TableData>number</TableData>
+</TableRow>
+<TableRow>
+    <TableData>funcss</TableData>
+    <TableData>Add funcss classes</TableData>
+    <TableData>funcss classes</TableData>
+</TableRow>
+</Table>
        </div>
+
 
        
 <div className="container padding-top-40" id="simple">
@@ -49,19 +79,21 @@ The class <span className="badge">top-tip</span> is use to create a tooltip to t
 </div>
 <div className="code">
    <xmp>
-{`<div class="tooltip">
-  <button class="button indigo card text-white"> Top Tooltip </button>
-  <span class="tip-top">Hello</span>
-</div>`}
+{`import ToolTip from 'Funcss/Components/ToolTip';
+import Button from 'Funcss/Components/Button';
+import Tip from 'Funcss/Components/Tip';
+<ToolTip>
+  <Button text="Top Tooltip" color="success"/>
+  <Tip tip="top" animation="ScaleUp" duration={1} content="Hello world!"/>
+</ToolTip>`}
    </xmp>
 </div>
 
 <div className="preview" id="modal">
-
-<div className="tooltip">
-  <button className="button indigo card text-white"> Top Tooltip </button>
-  <span className="tip-top">Hello</span>
-</div>
+<ToolTip>
+  <Button text="Top Tooltip" color="success"/>
+  <Tip tip="top" animation="ScaleUp" duration={1} content="Hello world!"/>
+</ToolTip>
 </div>
 
 
@@ -74,18 +106,21 @@ The class <span className="badge">bottom-tip</span> is use to create a tooltip w
 </div>
 <div className="code">
    <xmp>
-{`<div class="tooltip">
-  <button class="button indigo card text-white"> Bottom Tooltip </button>
-  <span class="tip-bottom">Hello</span>
-</div>`}
+{`import ToolTip from 'Funcss/Components/ToolTip';
+import Button from 'Funcss/Components/Button';
+import Tip from 'Funcss/Components/Tip';
+<ToolTip>
+  <Button text="Bottom Tooltip" color="success"/>
+  <Tip tip="bottom" animation="Opacity" duration={2} content="Hello world!"/>
+</ToolTip>`}
    </xmp>
 </div>
 
 <div className="preview">
-<div className="tooltip">
-  <button className="button indigo card text-white"> bottom Tooltip </button>
-  <span className="tip-bottom">Hello</span>
-</div>
+<ToolTip>
+  <Button text="Bottom Tooltip" color="success"/>
+  <Tip tip="bottom" animation="Opacity" duration={2} content="Hello world!"/>
+</ToolTip>
 </div>
 
 </div>
@@ -97,20 +132,24 @@ The class <span className="badge">left-tip</span> is use to create a tooltip whi
 </div>
 <div className="code">
    <xmp>
-{`<div class="tooltip">
-  <button class="button indigo card text-white"> Left Tooltip </button>
-  <span class="tip-left">Hello</span>
-</div>`}
+{`import ToolTip from 'Funcss/Components/ToolTip';
+import Button from 'Funcss/Components/Button';
+import Tip from 'Funcss/Components/Tip';
+<ToolTip>
+  <Button text="Left Tooltip" color="success"/>
+  <Tip tip="left" content="Hello world!"/>
+</ToolTip>
+`}
    </xmp>
 </div>
 
 <div className="preview">
-<div className="tooltip">
-  <button className="button indigo card text-white"> Left Tooltip </button>
-  <span className="tip-left">Hello</span>
-</div>
-</div>
+<ToolTip>
+  <Button text="Left Tooltip" color="success"/>
+  <Tip tip="left" content="Hello world!"/>
+</ToolTip>
 
+</div>
 </div>
 
 <div className="container padding-top-40" id="righttip">
@@ -120,18 +159,23 @@ The class <span className="badge">right-tip</span> is use to create a tooltip wh
 </div>
 <div className="code">
    <xmp>
-{`<div class="tooltip">
-  <button class="button indigo card text-white"> Right Tooltip </button>
-  <span class="tip-right">Hello</span>
-</div>`}
+{`import ToolTip from 'Funcss/Components/ToolTip';
+import Button from 'Funcss/Components/Button';
+import Tip from 'Funcss/Components/Tip';
+<ToolTip>
+  <Button text="Right Tooltip" color="success"/>
+  <Tip tip="right" content="Hello world!"/>
+</ToolTip>
+`}
    </xmp>
 </div>
 
 <div className="preview">
-<div className="tooltip">
-  <button className="button indigo card text-white"> Right Tooltip </button>
-  <span className="tip-right">Hello</span>
-</div>
+<ToolTip>
+  <Button text="Right Tooltip" color="success"/>
+  <Tip tip="right" content="Hello world!"/>
+</ToolTip>
+
 </div>
 
 </div>

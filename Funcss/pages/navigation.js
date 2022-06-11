@@ -2,6 +2,12 @@ import React from 'react';
 import Footer from './../components/Footer';
 import { useState } from 'react';
 import Head from "next/head"
+import Image from 'next/image';
+import Navbar from './../Funcss/Components/Navbar';
+import Div from './../Funcss/Components/Div';
+import Input from './../Funcss/Components/Input';
+import IconicInput from './../Funcss/Components/IconicInput';
+import Icon from './../Funcss/Components/Icon';
 function Navigation() {
     const [height, setheight] = useState("200px");
     const Handlesidebar = ()=>{
@@ -64,16 +70,17 @@ You can create simple navigation bars, just to navigate to your webpages.
 </xmp>
 </div>
 <div className="preview">
-<div className="navigation-bar light">
-<div className="nav-logo h3">Logo</div>
-<div className="padding">
-<a href="#" className="text-black hover-text-blue text-small">Home</a>
-<a href="#" className="text-black hover-text-blue text-small">About</a>
-<a href="#" className="text-black hover-text-blue text-small">Team</a>
-<a href="#" className="text-black hover-text-blue text-small">Contact</a>
-</div>
-</div>
-
+<Navbar>
+  <Div>
+    <Image src="/icons/favicon.png" height={50} width={50} />
+  </Div>
+  <Div>
+  <IconicInput funcss="section full-width" position="left" >
+<Input type="text" label="Search" funcss="full-width" bordered={true}  />
+<Icon icon="far fa-user-circle" color="indigo" />
+</IconicInput>
+  </Div>
+</Navbar>
 </div>
 </div>
        

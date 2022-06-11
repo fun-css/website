@@ -10,9 +10,7 @@ ${this.props.bg}
 ${this.props.funcss}
 `} 
 >
-<div>
-    <Navleft />
-</div>
+{this.props.children}
 </div>
 );
 }

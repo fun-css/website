@@ -1,7 +1,7 @@
 import React from 'react'
 const Section = ({children , funcss}) => {
 return ( 
-<div className={funcss} style={{paddingTop:"10px" , paddingBottom:"10px"}}>
+<div className={funcss} style={{paddingTop:"5px" , paddingBottom:"5px"}}>
 {children}
 </div>
 );
