@@ -13,6 +13,7 @@ onChange={this.props.onChange}
 defaultValue = {this.props.defaultValue}
 type={this.props.type}
 placeholder={this.props.label}
+name={this.props.name}
 />
 
 );   
@@ -27,6 +28,7 @@ onChange={this.props.onChange}
 defaultValue = {this.props.defaultValue}
 type={this.props.type}
 placeholder={this.props.label}
+name={this.props.name}
 />
 
 );
@@ -40,6 +42,7 @@ onChange={this.props.onChange}
 defaultValue = {this.props.defaultValue}
 type={this.props.type}
 placeholder={this.props.label}
+name={this.props.name}
 />
 
 );

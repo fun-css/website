@@ -8,6 +8,10 @@ import Div from './../Funcss/Components/Div';
 import Input from './../Funcss/Components/Input';
 import IconicInput from './../Funcss/Components/IconicInput';
 import Icon from './../Funcss/Components/Icon';
+import Anchor from '../Funcss/Components/Link';
+import NavLogo from '../Funcss/Components/NavLogo';
+import SidebarTrigger from './../Funcss/Components/SidebarTrigger';
+import LinkWrapper from './../Funcss/Components/LinkWrapper';
 function Navigation() {
     const [height, setheight] = useState("200px");
     const Handlesidebar = ()=>{
@@ -71,15 +75,21 @@ You can create simple navigation bars, just to navigate to your webpages.
 </div>
 <div className="preview">
 <Navbar>
+  <NavLogo>
+    <Image src="/icons/favicon.png" height={30} width={30} />
+  </NavLogo>
   <Div>
-    <Image src="/icons/favicon.png" height={50} width={50} />
+    <Input type="text" label="Search" funcss="round-30" bordered={true}/>
   </Div>
-  <Div>
-  <IconicInput funcss="section full-width" position="left" >
-<Input type="text" label="Search" funcss="full-width" bordered={true}  />
-<Icon icon="far fa-user-circle" color="indigo" />
-</IconicInput>
-  </Div>
+  <LinkWrapper>
+    <Anchor href="/" funcss="text-indigo pointer" text="Home"/>
+    <Anchor href="/" funcss="text-indigo pointer" text="About"/>
+    <Anchor href="/" funcss="text-indigo pointer" text="Team"/>
+    <Anchor href="/" funcss="text-indigo pointer" text="Contact"/>
+  </LinkWrapper>
+  <SidebarTrigger>
+    <Icon icon="fas fa-bars" />
+  </SidebarTrigger>
 </Navbar>
 </div>
 </div>
