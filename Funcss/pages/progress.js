@@ -74,7 +74,7 @@ Loaders are used to show the state of a progress.
    <xmp>
 {`import LoadSpan from 'Funcss/Components/LoadSpan';
 import Ellipsis from 'Funcss/Components/Ellipsis';
-<LoadSpan funcss="light" />
+<LoadSpan funcss="success" />
 <Ellipsis funcss="light" />
 `}
    </xmp>
