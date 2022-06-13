@@ -2,6 +2,9 @@ import React from 'react';
 import Footer from '../components/Footer';
 import Head from 'next/head';
 import Script from "next/script"
+import Grid from '../Funcss/Components/Grid';
+import Col from '../Funcss/Components/Col';
+import Typography from '../Funcss/Components/Typography';
 function grid() {
     const grid = `
     <div class="row">
@@ -40,16 +43,15 @@ function grid() {
             </div>
                 <div className="main-content">
                 <div className="container">
-             <h1 className="header h1 text-indigo">
+             <h1 className="header text-indigo">
                 Css Grid And Responsiveness - Funcss Framework
              </h1>
-             <div className="h4">
-                Grid make your website much more<br /> responsive.
+             <div className="h5 width-500-max">
+                Grid makes your website much more responsive. Create a website 
+                which fit every screen size.
              </div>
 
-             <div className="section hr">
-   
-             </div>
+        
             </div>
 
             <div className="container" id="introduction">
@@ -63,7 +65,7 @@ function grid() {
             </div>
 
             <div className="container">
-            <table className="table text-smaller stripped">
+            <table className="table">
 
     <tr>
         <td>Class</td>
@@ -142,21 +144,68 @@ function grid() {
 <div className="container padding-top-40" id="responsiveness">
     <div className="h4 topic">Responsive Grid</div>
     <div className="code">
-<xmp>{`<div className="row">
- <div className="col padding border sm-12 md-6 lg-8 light height-50">sm-12 md-6 lg-8</div>
- <div className="col padding border sm-12 md-6 lg-4  height-50">sm-12 md-6 lg-4</div>
- <div className="col padding border sm-6 md-8 lg-6  height-50">sm-6 md-8 lg-6</div>
- <div className="col padding border sm-6 md-4 lg-6 light height-50">sm-6 md-4 lg-6</div>
-</div> `}</xmp>
+<xmp>{`import Grid from 'Funcss/Components/Grid';
+import Col from 'Funcss/Components/Col';
+import Typography from 'Funcss/Components/Typography';
+<Grid>
+    <Col sm={12} md={6} lg={8} funcss="padding border light">
+    <Typography text="
+    100% width on small screen, 
+    50% width on medium screen
+    67% width on large screen
+    " color="success"/>
+    </Col>
+    <Col sm={12} md={6} lg={4} funcss="padding border">
+        <Typography text="
+    100% width on small screen, 
+    50% width on medium screen
+    34% width on large screen" color="success"/>
+    </Col>
+    <Col sm={6} md={12} lg={6} funcss="padding border">
+    <Typography text="
+    50% width on small screen, 
+    12% width on medium screen
+    50% width on large screen
+    " color="success"/>
+    </Col>
+    <Col sm={6} md={12} lg={6} funcss="padding border light">
+        <Typography text="
+    50% width on small screen, 
+    100% width on medium screen
+    50% width on large screen" color="success"/>
+    </Col>
+</Grid>`}</xmp>
     </div>
     <div className="preview">
  <div className="h3 text-lighter">Shrink your browser to see the effect</div>
-<div className="row">
- <div className="col padding border sm-12 md-6 lg-8 light height-50">sm-12 md-6 lg-8</div>
- <div className="col padding border sm-12 md-6 lg-4  height-50">sm-12 md-6 lg-4</div>
- <div className="col padding border sm-6 md-8 lg-6  height-50">sm-6 md-8 lg-6</div>
- <div className="col padding border sm-6 md-4 lg-6 light height-50">sm-6 md-4 lg-6</div>
-</div> 
+ <Grid>
+    <Col sm={12} md={6} lg={8} funcss="padding border light">
+    <Typography text="
+    100% width on small screen, 
+    50% width on medium screen
+    67% width on large screen
+    " color="success"/>
+    </Col>
+    <Col sm={12} md={6} lg={4} funcss="padding border">
+        <Typography text="
+    100% width on small screen, 
+    50% width on medium screen
+    34% width on large screen" color="success"/>
+    </Col>
+    <Col sm={6} md={12} lg={6} funcss="padding border">
+    <Typography text="
+    50% width on small screen, 
+    12% width on medium screen
+    50% width on large screen
+    " color="success"/>
+    </Col>
+    <Col sm={6} md={12} lg={6} funcss="padding border light">
+        <Typography text="
+    50% width on small screen, 
+    100% width on medium screen
+    50% width on large screen" color="success"/>
+    </Col>
+</Grid>
 
     </div>
 </div>

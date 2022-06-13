@@ -5,7 +5,7 @@ function Navbar() {
 return (
 <nav className="width-100-p fixed-top white navbar glass">
 <div className="container">
-<div className="navigation-bar">
+<div className="navigation-bar padding">
 <div className="nav-logo">
 <Logo />
 </div>

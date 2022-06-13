@@ -93,6 +93,7 @@ text="Components"
 color="indigo"
 funcss="card inline-block margin h4"
 size="large"
+startIcon={<Icon icon="fab fa-buffer"/>}
 />    
 </a>
 </Link>
