@@ -1,22 +1,22 @@
+import React from 'react'
 
-import React , {Component} from "react"
-export default class Button extends Component{
-render(){
-return ( 
+export default function Button({color , bg, funcss , size, onChange , onClick, startIcon, endIcon , children, text}) {
+return (
 <button className={`button
-text-${this.props.color}
-${this.props.bg} 
-${this.props.funcss}
-${this.props.size}
+text-${color}
+${bg} 
+${funcss}
+${size}
 `} 
-onClick={this.props.onClick}
-onChange={this.props.onChange}
+onClick={onClick}
+onChange={onChange}
 >
-{this.props.startIcon} &nbsp;
-{this.props.text}
-{this.props.children} &nbsp;
-{this.props.endIcon}
+{startIcon} &nbsp;
+{text}
+{children} &nbsp;
+{endIcon}
 </button>
-);
+)
 }
-}
+
+

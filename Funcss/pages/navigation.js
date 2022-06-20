@@ -5,13 +5,18 @@ import Head from "next/head"
 import Image from 'next/image';
 import Navbar from './../Funcss/Components/Navbar';
 import Div from './../Funcss/Components/Div';
-import Input from './../Funcss/Components/Input';
-import IconicInput from './../Funcss/Components/IconicInput';
-import Icon from './../Funcss/Components/Icon';
 import Anchor from '../Funcss/Components/Link';
 import NavLogo from '../Funcss/Components/NavLogo';
 import SidebarTrigger from './../Funcss/Components/SidebarTrigger';
 import LinkWrapper from './../Funcss/Components/LinkWrapper';
+import Card from './../Funcss/Components/Card'
+import Typography from "../Funcss/Components/Typography"
+import Dropdown from '../Funcss/Components/Dropdown';
+import Button from '../Funcss/Components/Button';
+import DropMenu from '../Funcss/Components/DropMenu';
+import DropItem from '../Funcss/Components/Dropitem';
+import RowFlex from '../Funcss/Components/RowFlex';
+import Icon from '../Funcss/Components/Icon';
 function Navigation() {
     const [height, setheight] = useState("200px");
     const Handlesidebar = ()=>{
@@ -43,16 +48,13 @@ function Navigation() {
        </div>
            <div className="main-content">
            <div className="container">
-        <h1 className="h1 header text-lighter text-indigo">
+        <h1 className="header text-indigo">
           Css Navigation Bar - Funcss Framework
         </h1>
-        <div className="h4">
+        <div className="h5 width-500-max">
           The navigation bar contains links to your webpages. create simple and responsive navigation bars with funcss framework.
         </div>
 
-        <div className="section hr">
-
-        </div>
        </div>
  
 <div className="container padding-top-40" id="simplenavbar">
@@ -62,35 +64,53 @@ You can create simple navigation bars, just to navigate to your webpages.
 </div>
 <div className="code">
 <xmp>
-{`<div class="navigation-bar light">
-   <div class="text-x-large nav-logo">Logo</div>
-     <div class="padding">
-       <a href="#" class="text-white text-small">Home</a>
-       <a href="#" class="text-white text-small">About</a>
-      <a href="#"  class="text-white text-small">Team</a>
-      <a href="#"  class="text-white text-small">Contact</a>
-     </div>
-</div>`}
-</xmp>
-</div>
-<div className="preview">
+{`import Navbar from '../Funcss/Components/Navbar';
+import Div from '../Funcss/Components/Div';
+import Icon from '../Funcss/Components/Icon';
+import Anchor from '../Funcss/Components/Link';
+import NavLogo from '../Funcss/Components/NavLogo';
+import SidebarTrigger from '../Funcss/Components/SidebarTrigger';
+import LinkWrapper from '../Funcss/Components/LinkWrapper';
+import Card from '../Funcss/Components/Card'
+import Typography from "Funcss/Components/Typography"
+import { RowFlex } from '../Funcss/Components/RowFlex';
+<Card funcss="padding">
 <Navbar>
   <NavLogo>
-    <Image src="/icons/favicon.png" height={30} width={30} />
+  <Typography heading="h4" text="Logo" />
   </NavLogo>
-  <Div>
-    <Input type="text" label="Search" funcss="round-30" bordered={true}/>
-  </Div>
+
   <LinkWrapper>
-    <Anchor href="/" funcss="text-indigo pointer" text="Home"/>
-    <Anchor href="/" funcss="text-indigo pointer" text="About"/>
-    <Anchor href="/" funcss="text-indigo pointer" text="Team"/>
-    <Anchor href="/" funcss="text-indigo pointer" text="Contact"/>
+    <Anchor href="/" text="Home"/>
+    <Anchor href="/" text="About"/>
+    <Anchor href="/" text="Team"/>
+    <Anchor href="/" text="Contact"/>
   </LinkWrapper>
   <SidebarTrigger>
     <Icon icon="fas fa-bars" />
   </SidebarTrigger>
 </Navbar>
+  </Card>`}
+</xmp>
+</div>
+<div className="preview">
+<Card funcss="padding">
+<Navbar>
+  <NavLogo>
+  <Typography heading="h4" text="Logo" />
+  </NavLogo>
+
+  <LinkWrapper>
+    <Anchor href="/" text="Home"/>
+    <Anchor href="/" text="About"/>
+    <Anchor href="/" text="Team"/>
+    <Anchor href="/" text="Contact"/>
+  </LinkWrapper>
+  <SidebarTrigger>
+    <Icon icon="fas fa-bars" />
+  </SidebarTrigger>
+</Navbar>
+  </Card>
 </div>
 </div>
        
@@ -126,25 +146,45 @@ This navigation bar have dropdown which contains links to other subpages.
    </xmp>
 </div>
 <div className="preview">
-<div className="navigation-bar light card width-100-p">
-   <div className="text-x-large nav-logo">Logo</div>
-     <div className="indigo padding">
-        <div className="row-flex">
-         <a href="#" className="text-white text-small">Home</a>
-         <a href="#" className="text-white text-small">About</a>
-      <div className="dropdown-hover">
-    <div className="button text-white drop-button text-small"> Dropdown <i className="fas fa-angle-down rotate-up"></i></div>
-     <div className="drop-menu white item-hoverable text-black fit-width">
-         <div className="drop-item">LinkOne</div>
-         <div className="drop-item">LinkTwo</div>
-         <div className="drop-item">LinkThree</div>
-         <div className="drop-item">LinkFour</div>
-     </div>
-     </div>
-     </div>
- </div>
-</div>
+<Card funcss="padding">
+<Navbar>
+  <NavLogo>
+  <Typography heading="h4" text="Logo" />
+  </NavLogo>
 
+  <LinkWrapper>
+    <RowFlex> 
+ <Div funcss="padding">
+ <Anchor href="/" text="Home"/>
+    <Anchor href="/" text="About"/>
+    <Anchor href="/" text="Team"/>
+    <Anchor href="/" text="Contact"/>
+ </Div>
+ <Div>
+ <Dropdown>
+<Button text="Dropdown" endIcon={<Icon icon="fas fa-angle-down" color="success"/>}/>
+    <DropMenu animation="ScaleUp" hoverable="hoverable" funcss="white" duration={0.5}>
+        <DropItem>
+        <Anchor href="/" text="Link One"/>
+        </DropItem>
+        <DropItem>
+        <Anchor href="/" text="Link Two"/>
+        </DropItem>
+        <DropItem>
+        <Anchor href="/" text="Link Three"/>
+        </DropItem>
+     
+    </DropMenu>
+</Dropdown>
+  </Div>
+    </RowFlex>
+  </LinkWrapper>
+
+  <SidebarTrigger>
+    <Icon icon="fas fa-bars" />
+  </SidebarTrigger>
+</Navbar>
+  </Card>
 </div>
 </div>
        

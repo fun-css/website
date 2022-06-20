@@ -94,10 +94,10 @@ function Sidebar() {
             text:"Tooltip",
             path:"tooltip"
         },
-        // {
-        //     text:"Navigation bar",
-        //     path:"navigation"
-        // },
+        {
+            text:"Navigation bar",
+            path:"navigation"
+        },
         // {
         //     text:"Slider",
         //     path:"slider"

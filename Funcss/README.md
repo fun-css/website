@@ -36,7 +36,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 =======
 # funweb
 >>>>>>> 4418c982021cbcbe2ccd877d1384eb219d876e6e
-import Dropdown from 'Funcss/Components/Dropdown';
-import Button from 'Funcss/Components/Button';
-import DropMenu from 'Funcss/Components/DropMenu';
-import DropItem from 'Funcss/Components/Dropitem';
+import Navbar from 'Funcss/Components/Navbar';
+import Div from 'Funcss/Components/Div';
+import Icon from 'Funcss/Components/Icon';
+import Anchor from 'Funcss/Components/Link';
+import NavLogo from 'Funcss/Components/NavLogo';
+import SidebarTrigger from 'Funcss/Components/SidebarTrigger';
+import LinkWrapper from 'Funcss/Components/LinkWrapper';
+import Card from 'Funcss/Components/Card'
+import Typography from "Funcss/Components/Typography"
