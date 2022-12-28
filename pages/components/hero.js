@@ -157,7 +157,7 @@ when they visit your website.
 </div>
 </Typography>
 </Container>
-<div classNam="">
+<div className="">
 
 {
 Sections.map(docs=>(
